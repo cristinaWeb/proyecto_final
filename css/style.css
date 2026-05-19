@@ -106,8 +106,9 @@ body {
 
 .header {
     display: flex;
-    background-color: #7B4B2A;;
+    background-color: #7B4B2A;
     justify-content: space-between;
+    padding: 16px;
 }
 
 .header__container {
@@ -132,7 +133,32 @@ body {
     gap: 100px;
     align-items: center;
     list-style: none;
+
+} 
+
+.nav__list-link{
+color: #C9D6B8;
+padding: 20PX;
+transition: 0.5s ease;
+background-color: #4e301c7c;
+border-radius: var(--radius-lg);
 }
+
+.nav__list-link:hover {
+background-color: #4e301cbb;
+
+}
+
+
+/* ----------------el hero o epartado con la presentacion inical --------------------- */
+
+
+
+
+
+
+
+
 
 /* provicional */
 
