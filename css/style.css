@@ -106,40 +106,38 @@ body {
 
 .header {
     display: flex;
-    background-color: #faf7f298;
-    padding: 20px;
-
+    background-color: #7B4B2A;;
+    justify-content: space-between;
 }
 
 .header__container {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     width: 100%;
+    align-items: center;
 }
 
 .header__description {
-    text-align: center;
+    color: #F3E9D2;
 }
 
 .header__nav {
-    background-color: #7B4B2A;
+    display: flex;
+    align-items: center;
 }
 
 
 
 .nav__list {
     display: flex;
-    justify-content: space-evenly;
+    gap: 100px;
     align-items: center;
     list-style: none;
-
 }
 
 /* provicional */
 
 .header__logo-img {
-    width: 150px;
+    width: 100px;
 }
 
 img {
