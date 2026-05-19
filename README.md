@@ -1,2 +1,3 @@
 # proyecto_final
-gay el que no colabore
+gay el que no colabore sexo
+
