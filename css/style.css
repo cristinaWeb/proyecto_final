@@ -1,158 +1,149 @@
 :root {
-  /* Paleta de colores */
-  --color-bg: #faf9f7;
-  /* Fondo principal: blanco cálido */
-  --color-surface: #ffffff;
-  /* Superficie de tarjetas */
-  --color-dark: #1a1714;
-  /* Texto principal */
-  --color-dark-soft: #3d3832;
-  /* Texto secundario */
-  --color-muted: #8c8278;
-  /* Texto de apoyo */
-  --color-accent: #b5884a;
-  /* Dorado fotográfico */
-  --color-accent-light: #e8d5b0;
-  /* Acento claro */
-  --color-border: #e5e0d8;
-  /* Bordes suaves */
-  --color-dark-bg: #1a1714;
-  /* Fondo secciones oscuras */
-  --color-dark-surface: #242019;
-  /* Superficie en oscuro */
+    /* Paleta de colores */
+    --color-bg: #faf9f7;
+    /* Fondo principal: blanco cálido */
+    --color-surface: #ffffff;
+    /* Superficie de tarjetas */
+    --color-dark: #1a1714;
+    /* Texto principal */
+    --color-dark-soft: #3d3832;
+    /* Texto secundario */
+    --color-muted: #8c8278;
+    /* Texto de apoyo */
+    --color-accent: #b5884a;
+    /* Dorado fotográfico */
+    --color-accent-light: #e8d5b0;
+    /* Acento claro */
+    --color-border: #e5e0d8;
+    /* Bordes suaves */
+    --color-dark-bg: #1a1714;
+    /* Fondo secciones oscuras */
+    --color-dark-surface: #242019;
+    /* Superficie en oscuro */
 
-  /* Tipografía */
-  --font-display: "Playfair Display", Georgia, serif;
-  --font-body: "DM Sans", sans-serif;
+    /* Tipografía */
+    --font-display: "Playfair Display", Georgia, serif;
+    --font-body: "DM Sans", sans-serif;
 
-  /* Tamaños de fuente */
-  --text-xs: 0.75rem;
-  /*  12px */
-  --text-sm: 0.875rem;
-  /*  14px */
-  --text-base: 1rem;
-  /*  16px */
-  --text-lg: 1.125rem;
-  /*  18px */
-  --text-xl: 1.25rem;
-  /*  20px */
-  --text-2xl: 1.5rem;
-  /*  24px */
-  --text-3xl: 1.875rem;
-  /*  30px */
-  --text-4xl: 2.25rem;
-  /*  36px */
-  --text-5xl: 3rem;
-  /*  48px */
-  --text-6xl: 3.75rem;
-  /*  60px */
+    /* Tamaños de fuente */
+    --text-xs: 0.75rem;
+    /*  12px */
+    --text-sm: 0.875rem;
+    /*  14px */
+    --text-base: 1rem;
+    /*  16px */
+    --text-lg: 1.125rem;
+    /*  18px */
+    --text-xl: 1.25rem;
+    /*  20px */
+    --text-2xl: 1.5rem;
+    /*  24px */
+    --text-3xl: 1.875rem;
+    /*  30px */
+    --text-4xl: 2.25rem;
+    /*  36px */
+    --text-5xl: 3rem;
+    /*  48px */
+    --text-6xl: 3.75rem;
+    /*  60px */
 
-  /* Espaciado */
-  --space-1: 0.25rem;
-  --space-2: 0.5rem;
-  --space-3: 0.75rem;
-  --space-4: 1rem;
-  --space-5: 1.25rem;
-  --space-6: 1.5rem;
-  --space-8: 2rem;
-  --space-10: 2.5rem;
-  --space-12: 3rem;
-  --space-16: 4rem;
-  --space-20: 5rem;
-  --space-24: 6rem;
+    /* Espaciado */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+    --space-24: 6rem;
 
-  /* Bordes */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 16px;
-  --radius-full: 9999px;
+    /* Bordes */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-full: 9999px;
 
-  /* Sombras */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.10);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.14);
+    /* Sombras */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.10);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.14);
 
-  /* Ancho máximo del contenedor */
-  --container-max: 1100px;
-  --container-padding: var(--space-6);
+    /* Ancho máximo del contenedor */
+    --container-max: 1100px;
+    --container-padding: var(--space-6);
 
-  /* Transiciones */
-  --transition-fast: 0.15s ease;
-  --transition-base: 0.25s ease;
+    /* Transiciones */
+    --transition-fast: 0.15s ease;
+    --transition-base: 0.25s ease;
 }
 
 
 /* ================================================================
    2. RESET Y BASE
 ================================================================ */
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-a{
+a {
     text-decoration: none;
     color: black;
 }
 
-body{
-font-family: Arial, Helvetica, sans-serif;
-max-width: 1700px;
-margin: 0 auto;
-background-color: #F3E9D2;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1700px;
+    margin: 0 auto;
+    background-color: #F3E9D2;
 }
 
 
-.header{
+.header {
     display: flex;
     background-color: #faf7f298;
     padding: 20px;
 
 }
 
-.header__container{
+.header__container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
 }
 
-.header__description{
-text-align: center;
+.header__description {
+    text-align: center;
 }
 
-.header__nav{
+.header__nav {
     background-color: #7B4B2A;
 }
 
 
 
-.nav__list{
+.nav__list {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
 
 }
+
 /* provicional */
 
-.header__logo-img{
+.header__logo-img {
     width: 150px;
 }
 
-img{
+img {
     width: 150px;
 }
+
 /* ----------------- */
-
-
-
-
-
-
-
-
-
-
-
