@@ -98,7 +98,7 @@ a {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    max-width: 1700px;
+    max-width: 1200px;
     margin: 0 auto;
     background-color: #F3E9D2;
 }
@@ -130,7 +130,7 @@ body {
 
 .nav__list {
     display: flex;
-    gap: 100px;
+    gap: 20px;
     align-items: center;
     list-style: none;
 
@@ -138,7 +138,7 @@ body {
 
 .nav__list-link{
 color: #C9D6B8;
-padding: 20PX;
+padding: 20PX 40px;
 transition: 0.5s ease;
 background-color: #4e301c7c;
 border-radius: var(--radius-lg);
@@ -153,17 +153,11 @@ background-color: #4e301cbb;
 /* ----------------el hero o epartado con la presentacion inical --------------------- */
 
 
-
-
-
-
-
-
-
 /* provicional */
 
 .header__logo-img {
     width: 100px;
+    margin: 10px;
 }
 
 img {
@@ -171,3 +165,42 @@ img {
 }
 
 /* ----------------- */
+
+/*-------------------------------- seccion nosotros ----------------------------*/
+
+/* provicional */
+.nosotros{
+    border: 1px solid black;
+    padding: 10px; 
+}
+
+/* ----------------- */
+
+.nosotros__description{
+    display: flex;
+
+}
+
+.description_box{
+    width: 70%;
+    margin: 10px;
+    padding: 10px;
+    background-color:#7b4a2a49;
+    border-radius: var(--radius-md);
+}
+
+.nosotros__description__img{
+    width: 30%;
+    border: 1px solid black;
+
+}
+
+
+
+
+
+
+
+
+
+
