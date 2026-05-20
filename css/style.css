@@ -137,7 +137,7 @@ body {
 } 
 
 .nav__list-link{
-color: #C9D6B8;
+color: #deeccc;
 padding: 20PX 40px;
 transition: 0.5s ease;
 background-color: #4e301c7c;
@@ -160,46 +160,75 @@ background-color: #4e301cbb;
     margin: 10px;
 }
 
-img {
-    width: 150px;
-}
-
 /* ----------------- */
 
 /*-------------------------------- seccion nosotros ----------------------------*/
 
 /* provicional */
 .nosotros{
-    border: 1px solid black;
     padding: 10px; 
+    background-color:#7b4a2a49;
+
 }
 
 /* ----------------- */
 
+
+/* descripcion------------------- */
 .nosotros__description{
     display: flex;
 
 }
 
-.description_box{
+.description__content{
     width: 70%;
-    margin: 10px;
-    padding: 10px;
-    background-color:#7b4a2a49;
+    margin: 10px ;
+    padding: 10px 18px;
+background-color: #7b4a2ab2;
     border-radius: var(--radius-md);
 }
 
-.nosotros__description__img{
+.description__img{
     width: 30%;
-    border: 1px solid black;
-
+    border-radius: var(--radius-lg);
 }
 
 
+.description__content-text{
+    padding-block: var(--space-2);
+    color: #ece7cc;
+}
 
+/* ----------------------------------------------------------------------------------- */
 
+/* --------------------------valores y demas------------------------------------------- */
 
+.creencias{
+    margin-top: var(--space-3);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-5);
+}
 
+.title{
+    color: rgba(231, 224, 123, 0.767);
+    border-bottom: 3px solid black;
+}
+
+.grid-item{
+    background-color: #7b4a2ab2;
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+    color: #ece7cc;
+}
+
+.creencias-text{
+    margin-top: var(--space-3);
+}
+
+.valores__list{
+    list-style-type: none;
+}
 
 
 
