@@ -25,7 +25,7 @@
 
                 <h1 class="header__title">Bistro KAF</h1>
 
-                <p class="header_subtitle">Más que un bistró, una experiencia</p>
+                <p class="header__subtitle">Más que un bistró, una experiencia</p>
 
             </div>
         </div>
@@ -57,39 +57,38 @@
     <!-- ----------------------barra de navegacion y logo princial-------------- -->
 
 
-    <!-------------------------------- cuerpo de la pagina ---------------------------->
+
     <main class="main">
 
-        <!-------------------------------- seccion nosotros ---------------------------->
         <section class="nosotros" id="nosotros">
 
             <h2 class="nosotros__title">Nosotros</h2>
 
             <article class="nosotros__description">
 
-                <div class="description_box">
-            
                 <h3 class="description__title">Descripción</h3>
 
                 <p class="description__content">
                     En Bistro KAF, creemos que los mejores momentos se disfrutan alrededor de buena comida y un ambiente
                     acogedor. Somos un pequeño bistró creado para brindar comodidad, sabor y experiencias agradables a
                     cada persona que nos visita.
+                </p>
 
+                <p class="description__content">
                     Nos dedicamos a ofrecer comida casera, bebidas frías y calientes elaboradas artesanalmente, y
                     deliciosos postres preparados con dedicación, buscando que cada detalle haga sentir a nuestros
                     clientes como en casa.
+                </p>
 
+                <p class="description__content">
                     Nuestro propósito es crear un espacio cálido y relajado, ideal para compartir con amigos, familia o
                     simplemente disfrutar un momento especial, donde cada visita se convierta en una experiencia llena
                     de sabor, tranquilidad y buenos recuerdos.
                 </p>
 
-                </div>
-
                 <img src="images/pasantes_becados.png" alt="Imagen de becados siendo explotados laboralmente"
-                    class="nosotros__description__img">
-            
+                    class="description__img">
+
             </article>
 
             <article class="nosotros__vision">
@@ -125,109 +124,463 @@
                 </ul>
 
             </article>
-            
+
         </section>
-        <!-------------------------------- seccion nosotros ---------------------------->
 
         <section class="menu" id="menu">
             <h2 class="menu__title">Menú: Nuestros manjares</h2>
 
-            <article class="menu__desayuno menu_item">
+            <div class="menu__container">
 
-                <h3 class="menu__desayuno__title">Desayunos</h3>
+                <article class="menu-category menu-category--desayunos">
+                    <h3 class="menu-category__title">Desayunos</h3>
 
-                <div class="desayuno">
-                    <h4 class="desayuno__title">Omelet con chorizo</h4>
-                    <p class="desayuno__description">Huevos batidos rellenos de chorizo artesanal y queso derretido,
-                        acompañado de pan tostado.</p>
-                    <span class="desayuno__price">$6.50</span>
-                </div>
+                    <div class="menu-card">
 
-                <div class="desayuno">
-                    <h4 class="desayuno__title">Desayuno Tradicional</h4>
-                    <p class="desayuno__description">Plátanos fritos, huevos al gusto, frijoles refritos, crema y pan
-                        francés.</p>
-                    <span class="desayuno__price">$5.75</span>
-                </div>
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Omelet Foto">
+                            <figcaption class="menu-card__overlay">
+                                Huevos batidos rellenos de chorizo artesanal y queso derretido, acompañado de pan
+                                tostado.
+                            </figcaption>
+                        </figure>
 
-                <div class="desayuno">
-                    <h4 class="desayuno__title">Desayuno Americano</h4>
-                    <p class="desayuno__description">Tres pancakes esponjosos, huevos revueltos y lascas de tocino
-                        crujiente.</p>
-                    <span class="desayuno__price">$6.25</span>
-                </div>
-            </article>
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Omelet con chorizo</h4>
+                            <span class="menu-card__price">$6.50</span>
+                        </div>
+                    </div>
 
-            <article class="menu__panini menu_item">
+                    <div class="menu-card">
+                        <h4 class="menu-card__title">Omelet con chorizo</h4>
+                        <p class="menu-card__description">
+                            Huevos batidos rellenos de chorizo artesanal y queso derretido, acompañado de pan tostado.
+                        </p>
+                        <span class="menu-card__price">$6.50</span>
+                    </div>
 
-                <h3 class="menu__panini__title">Panini´s de la casa</h3>
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Desayuno tradicional" class="menu-card__img">
 
-                <div class="panini">
-                    <h4 class="panini__title">Panini de tocino</h4>
-                    <p class="panini__description">Tocino crujiente, queso gouda derretido, tomate y aderezo de la casa
-                        en pan ciabatta.</p>
-                    <span class="panini__price">$5.95</span>
-                </div>
-                <div class="panini">
-                    <h4 class="panini__title">Panini de jamón y queso</h4>
-                    <p class="panini__description">Jamón de pavo premium, mezcla de quesos y un toque de mantequilla de
-                        ajo.</p>
-                    <span class="panini__price">$5.50</span>
-                </div>
-                <div class="panini">
-                    <h4 class="panini__title">Pizza panini</h4>
-                    <p class="panini__description">Salsa marinara de la casa, pepperoni, abundante queso mozzarella y
-                        orégano.</p>
-                    <span class="panini__price">$5.75</span>
-                </div>
-            </article>
+                            <figcaption class="menu-card__overlay">
+                                Plátanos fritos, huevos al gusto, frijoles refritos, crema y pan francés.
+                            </figcaption>
+                        </figure>
 
-            <article class="menu__postres menu_item">
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Desayuno Tradicional</h4>
+                            <span class="menu-card__price">$5.75</span>
+                        </div>
+                    </div>
 
-                <h3 class="menu__postres__title">Postres</h3>
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Desayuno americano" class="menu-card__img">
 
-                <div class="postre">
-                    <h4 class="postre__title">Cheesecake (variedades)</h4>
-                    <p class="postre__description">Base crujiente con crema de queso horneada, topping de fresa, frutos
-                        rojos o caramelo.</p>
-                    <span class="postre__price">$4.50</span>
-                </div>
-                <div class="postre">
-                    <h4 class="postre__title">Tres Leches</h4>
-                    <p class="postre__description">Bizcocho esponjoso bañado en nuestra mezcla tradicional de tres
-                        leches y canela.</p>
-                    <span class="postre__price">$4.00</span>
-                </div>
-                <div class="postre">
-                    <h4 class="postre__title">Empanadas (frijol o poleada)</h4>
-                    <p class="postre__description">Tradicionales empanadas de plátano maduro rellenas, espolvoreadas con
-                        azúcar.</p>
-                    <span class="postre__price">$3.00</span>
-                </div>
-                <div class="postre">
-                    <h4 class="postre__title">Crepas (variedades)</h4>
-                    <p class="postre__description">Crepas delgadas rellenas a tu elección: Nutella con banano o dulce de
-                        leche.</p>
-                    <span class="postre__price">$4.75</span>
-                </div>
-                <div class="postre">
-                    <h4 class="postre__title">Tartaletas</h4>
-                    <p class="postre__description">Masa quebrada rellena de crema pastelera fina y decorada con frutas
-                        de la temporada.</p>
-                    <span class="postre__price">$3.50</span>
-                </div>
-                <div class="postre">
-                    <h4 class="postre__title">Pie (variedades)</h4>
-                    <p class="postre__description">Porción de pie horneado, disponible en sabor de manzana con canela o
-                        limón merengado.</p>
-                    <span class="postre__price">$3.85</span>
-                </div>
-            </article>
+                            <figcaption class="menu-card__overlay">
+                                Tres pancakes esponjosos, huevos revueltos y lascas de tocino crujiente.
+                            </figcaption>
+                        </figure>
 
-            <article class="menu__bebidas-calientes">
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Desayuno Americano</h4>
+                            <span class="menu-card__price">$6.25</span>
+                        </div>
+                    </div>
+                </article>
 
-            </article>
+                <article class="menu-category menu-category--paninis">
+                    <h3 class="menu-category__title">Paninis de la casa</h3>
 
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Panini de tocino" class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                Tocino crujiente, queso gouda derretido, tomate y aderezo de la casa en pan ciabatta.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Panini de tocino</h4>
+                            <span class="menu-card__price">$5.95</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Panini de jamón y queso" class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                Jamón de pavo premium, mezcla de quesos y un toque de mantequilla de ajo.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Panini de jamón y queso</h4>
+                            <span class="menu-card__price">$5.50</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Pizza panini" class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                Salsa marinara de la casa, pepperoni, abundante queso mozzarella y orégano.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Pizza panini</h4>
+                            <span class="menu-card__price">$5.75</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-category menu-category--postres">
+                    <h3 class="menu-category__title">Postres</h3>
+
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Cheesecake" class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                Base crujiente con crema de queso horneada, topping de fresa, frutos rojos o caramelo.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Cheesecake (variedades)</h4>
+                            <span class="menu-card__price">$4.50</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Tres leches" class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                Bizcocho esponjoso bañado en nuestra mezcla tradicional de tres leches y canela.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Tres Leches</h4>
+                            <span class="menu-card__price">$4.00</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Empanadas de frijol o poleada" class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                Tradicionales empanadas de plátano maduro rellenas, espolvoreadas con azúcar.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Empanadas (frijol o poleada)</h4>
+                            <span class="menu-card__price">$3.00</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Crepas" class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                Crepas delgadas rellenas a tu elección: Nutella con banano o dulce de leche.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Crepas (variedades)</h4>
+                            <span class="menu-card__price">$4.75</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Tartaletas" class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                Masa quebrada rellena de crema pastelera fina y decorada con frutas de la temporada.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Tartaletas</h4>
+                            <span class="menu-card__price">$3.50</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Pie de manzana o limón" class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                Porción de pie horneado, disponible en sabor de manzana con canela o limón merengado.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Pie (variedades)</h4>
+                            <span class="menu-card__price">$3.85</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-category menu-category--bebidas-calientes">
+                    <h3 class="menu-category__title">Bebidas Calientes</h3>
+
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Café americano" class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                Clásico y reconfortante. Una extracción perfecta de espresso diluida en agua caliente
+                                para resaltar las notas tostadas y el aroma de un buen café de especialidad.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Café Americano</h4>
+                            <span class="menu-card__price">$2.50</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Cappuccino" class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                El balance perfecto entre intensidad y cremosidad. Una carga de espresso combinada con
+                                leche vaporizada y una generosa capa de espuma aterciopelada.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Cappuccino</h4>
+                            <span class="menu-card__price">$3.75</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Espresso" class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                La esencia pura del café. Una extracción concentrada, con cuerpo robusto, aroma
+                                penetrante y una crema densa de color avellana.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Espresso</h4>
+                            <span class="menu-card__price">$2.25</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Macchiato" class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                Para quienes buscan un toque de fuerza. Un espresso corto "manchado" delicadamente con
+                                una sutil corona de espuma de leche caliente.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Macchiato</h4>
+                            <span class="menu-card__price">$3.25</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Té de rosas" class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                Una infusión aromática y elegante. Pétalos de rosa seleccionados que ofrecen una
+                                experiencia floral, suave y naturalmente relajante.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Té de Rosas</h4>
+                            <span class="menu-card__price">$3.00</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Té de hierbabuena" class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                Frescura pura en una taza. Infusión de hojas de hierbabuena natural, ideal para digerir
+                                o simplemente disfrutar de un momento revitalizante.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Té de Hierbabuena</h4>
+                            <span class="menu-card__price">$2.75</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-category menu-category--bebidas-naturales">
+                    <h3 class="menu-category__title">Bebidas Naturales</h3>
+
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Limonada con fresa" class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                El equilibrio perfecto entre lo cítrico y lo dulce. Jugo de limón recién exprimido
+                                combinado con el frescor y color de fresas naturales maceradas.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Limonada con Fresa</h4>
+                            <span class="menu-card__price">$3.50</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Limonada con hierbabuena" class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                Ultra refrescante y digestiva. Limonada clásica frappé mezclada con hojas frescas de
+                                hierbabuena para un toque herbal inigualable.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Limonada con Hierbabuena</h4>
+                            <span class="menu-card__price">$3.25</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Jugo de pepino" class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                Ligero, hidratante y revitalizante. Jugo natural de pepino con un sutil toque de limón,
+                                ideal para los días más cálidos.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Jugo de Pepino</h4>
+                            <span class="menu-card__price">$3.00</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Piña colada virgen" class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                Un escape tropical sin alcohol. Mezcla cremosa de pulpa de piña natural y crema de coco,
+                                servida bien fría.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Piña Colada Virgen</h4>
+                            <span class="menu-card__price">$4.25</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-category menu-category--refrescos">
+                    <h3 class="menu-category__title">Refrescos</h3>
+
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Coca-Cola" class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                Refresco clásico servido bien frío.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Coca-Cola</h4>
+                            <span class="menu-card__price">$1.75</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Pepsi" class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                Refresco clásico servido bien frío.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Pepsi</h4>
+                            <span class="menu-card__price">$1.75</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Mirinda" class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                Refresco sabor naranja, ideal para acompañar tus comidas.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Mirinda</h4>
+                            <span class="menu-card__price">$1.75</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Crema soda" class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                Bebida dulce y refrescante con sabor tradicional.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Crema Soda</h4>
+                            <span class="menu-card__price">$2.00</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="" alt="Té Lipton" class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                Té frío disponible en diferentes variedades.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Té Lipton (variedades)</h4>
+                            <span class="menu-card__price">$2.25</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
         </section>
 
 
