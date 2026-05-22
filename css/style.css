@@ -236,12 +236,6 @@ background-color: #4e301cbb;
 
 /* -------------------------menu desayunos ----------------------------- */
 
-.menu-card__img{
-width: 50%;
-display: flex;
-margin: auto;
-}
-
 .menu{
     display: flex;
     flex-direction: column;
@@ -250,7 +244,6 @@ margin: auto;
 .menu-category{
 padding: 10px;
 background-color: #7b4a2ab2;
-
 
 }
 
@@ -265,13 +258,20 @@ font-size: var(--text-3xl);
 .menu-card{
 background-color: #deeccc;      
 padding:10px 8px;
+width: 100%;
+}
+
+.menu-card__img{
+width: 50%;
+display: flex;
+margin: auto;
 }
 
 .menu-category--desayunos{
 border: 1px solid;
 display: grid;
 grid-template-columns: repeat(3,1fr);
-gap: var(--space-4);
+gap: var(--space-8);
 }
 
 .menu-category--paninis{
