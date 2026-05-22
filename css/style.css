@@ -141,12 +141,8 @@ body {
     align-items: center;
     list-style: none;
     
-    /*background-color: #222;*/
+    background-color: #222;
 } 
-
-.nav__list-item {
-height: 100%;
-}
 
 .nav__list-link{
 color: #deeccc;
@@ -182,10 +178,11 @@ background-color: #4e301cbb;
     padding: 10px 18px;
     background-color: #7b4a2ab2;
     border-radius: var(--radius-md);
+    margin-bottom: auto;
 }
 
 .description__img{
-    width: 30%;
+    width: 275px;
     border-radius: var(--radius-lg);
 }
 
