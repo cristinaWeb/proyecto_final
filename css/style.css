@@ -107,20 +107,26 @@ body {
 
 /* provicional */
 
+.header__logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .header__logo-img {
-    width: 60px;
-    margin-right: 10px;
+    width: 75px;
+    justify-content: center;
+    padding: 8px;
 }
 .header {
     display: flex;
     background-color: #7B4B2A;
     justify-content: space-between;
-    width: 100%;
 }
 
 .header__container {
     display: flex;
-    align-items: start;
+    align-items: center;
 }
 
 .header__description {
@@ -143,13 +149,12 @@ body {
 } 
 .nav__list-item {
     display: flex;
-    list-style: none;
     width: 100%;
 }
 .nav__list-link{
 flex: 1 0 0;
 color: #deeccc;
-padding: 20px 40px;
+padding: 25px 40px;
 transition: 0.5s ease;
 background-color: #4e301c7c;
 font-weight: 700;
