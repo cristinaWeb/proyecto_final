@@ -120,8 +120,11 @@ body {
 }
 .header {
     display: flex;
-    background-color: #7B4B2A;
+    background-color: #7b4a2af8;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .header__container {
@@ -145,7 +148,7 @@ body {
     /* gap: 20px; */
     align-items: center;
     list-style: none;
-    background-color: #222;
+    background-color: #222222e0;
 } 
 .nav__list-item {
     display: flex;
@@ -231,10 +234,56 @@ background-color: #4e301cbb;
 
 
 
+/* -------------------------menu desayunos ----------------------------- */
 
 .menu-card__img{
-width: 150px;
+width: 50%;
+display: flex;
+margin: auto;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-category{
+padding: 10px;
+background-color: #7b4a2ab2;
 
 
+}
 
+
+.menu-category__title{
+margin-top: var(--space-4);
+justify-content: center;
+display: flex;
+font-size: var(--text-3xl);
+}
+
+.menu-card{
+background-color: #deeccc;      
+padding:10px 8px;
+}
+
+.menu-category--desayunos{
+border: 1px solid;
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: var(--space-4);
+}
+
+.menu-category--paninis{
+border: 1px solid;
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: var(--space-4);
+}
+
+.menu-category--postres{
+border: 1px solid;
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: var(--space-4);
 }
