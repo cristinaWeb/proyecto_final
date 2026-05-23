@@ -115,11 +115,12 @@ body {
     display: flex;
     background-color: #7B4B2A;
     justify-content: space-between;
-    width: 100%;
+    padding: 8px;
 }
 
 .header__container {
     display: flex;
+    width: 100%;
     align-items: start;
 }
 
@@ -139,21 +140,19 @@ body {
     /* gap: 20px; */
     align-items: center;
     list-style: none;
+    
     background-color: #222;
 } 
-.nav__list-item {
-    display: flex;
-    list-style: none;
-    width: 100%;
-}
+
 .nav__list-link{
-flex: 1 0 0;
 color: #deeccc;
-padding: 20px 40px;
+padding: 0 40px;
 transition: 0.5s ease;
-background-color: #4e301c7c;
+/* background-color: #4e301c7c; */
+/* border-radius: var(--radius-lg); */
 font-weight: 700;
 font-size: 22px;
+height: 100%;
 }
 
 .nav__list-link:hover {
@@ -164,7 +163,7 @@ background-color: #4e301cbb;
 
 .nosotros{
     padding: 10px; 
-    background-color:#5d463749;
+    background-color:#7b4a2a49;
 
 }
 
