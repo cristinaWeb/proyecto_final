@@ -122,23 +122,14 @@ body {
     display: flex;
     background-color: #7b4a2af8;
     justify-content: space-between;
-<<<<<<< HEAD
-    padding: 8px;
-=======
     position: sticky;
     top: 0;
     z-index: 1000;
->>>>>>> a9c22d5b69dc6cf59dd8821b7edda3112922a8a2
 }
 
 .header__container {
     display: flex;
-<<<<<<< HEAD
-    width: 100%;
-    align-items: start;
-=======
     align-items: center;
->>>>>>> a9c22d5b69dc6cf59dd8821b7edda3112922a8a2
 }
 
 .header__description {
@@ -155,15 +146,6 @@ body {
     display: flex;
     align-items: center;
     list-style: none;
-<<<<<<< HEAD
-    
-    background-color: #222;
-} 
-
-.nav__list-link{
-color: #deeccc;
-padding: 0 40px;
-=======
     background-color: #222222e0;
 } 
 .nav__list-item {
@@ -173,13 +155,10 @@ padding: 0 40px;
 flex: 1 0 0;   /*  no hace nada --------------------*/
 color: #deeccc;
 padding: 25px 40px;
->>>>>>> a9c22d5b69dc6cf59dd8821b7edda3112922a8a2
 transition: 0.5s ease;
-/* background-color: #4e301c7c; */
-/* border-radius: var(--radius-lg); */
+background-color: #4e301c7c;
 font-weight: 700;
 font-size: 22px;
-height: 100%;
 }
 
 .nav__list-link:hover {
@@ -190,7 +169,7 @@ background-color: #4e301cbb;
 
 .nosotros{
     padding: 10px; 
-    background-color:#7b4a2a49;
+    background-color:#5d463749;
 
 }
 
