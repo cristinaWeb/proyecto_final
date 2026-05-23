@@ -22,7 +22,7 @@
 
     <!-- ---------------- BARRA DE NAVEGACIÓN Y LOGO PRINCIPAL -------------- -->
 
-    <header class="header" id="inicio">
+    <header class="header">
         <div class="header__container">
             <div class="header__logo">
                 <img src="images/logo.png" alt="logo de bistro KAF" class="header__logo-img">
@@ -51,26 +51,32 @@
 
     <!-- ------------------ HERO ------------------ -->
 
-    <section class="hero">
+    <section class="hero" id="inicio">
         <div class="hero__content">
             <div class="hero__text">
-                <p class="hero__tag">Bistro artesanal en Jocoro</p>
-                <h2 class="hero__title">Bienvenido a Bistro KAF</h2>
+                <div class="hero__divprovisional">
+                    <p class="hero__tag">Bistro artesanal en Jocoro</p>
+                    <h2 class="hero__title">Bienvenido a Bistro KAF</h2>
 
-                <p class="hero__description">
-                    Un espacio creado para disfrutar buena comida, bebidas artesanales y momentos tranquilos.
-                    Aquí cada detalle busca hacerte sentir cómodo, relajado y en casa.
-                </p>
+                    <p class="hero__description">
+                        Un espacio creado para disfrutar buena comida, bebidas artesanales y momentos tranquilos.
+                        Aquí cada detalle busca hacerte sentir cómodo, relajado y en casa.
+                    </p>
 
-                <div class="hero__buttons">
-                    <a href="#menu" class="hero__button hero__button--menu">Ver menú</a>
+                    <div class="hero__buttons">
+                        <a href="#menu" class="hero__button hero__button--menu">Ver menú</a>
 
-                    <a href="#nosotros" class="hero__button hero__button--info">Conócenos</a>
+                        <a href="#nosotros" class="hero__button hero__button--info">Conócenos</a>
+                    </div>
                 </div>
+
             </div>
 
             <div class="hero__image-container">
-                <img src="" alt="" class="hero__image">
+                <div class="hero__image-containerimg">
+                    <img src="images/imagen__hero.png" alt="" class="hero__image">
+                </div>
+
             </div>
         </div>
     </section>
@@ -154,7 +160,7 @@
 
             <div class="menu__container">
 
-        <!-------------------------- desayunos------------------------------------------------------------ -->
+                <!-------------------------- desayunos------------------------------------------------------------ -->
 
                 <article class="menu-category menu-category--desayunos">
                     <h3 class="menu-category__title">Desayunos</h3>
@@ -208,7 +214,63 @@
                     </div>
                 </article>
 
-        <!-------------------------- paninis------------------------------------------------------------ -->
+                <!-------------------------- Almuerzitos sensualones------------------------------------------------------------ -->
+                <article class="menu-category menu-category--almuerzos">
+                    <h3 class="menu-category__title">Almueros modestos</h3>
+
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="images/menu/almuerzos/rotinicarbonara.png" alt="Pasta Rotini Carbonara"
+                                class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                Pasta espiral con salsa cremosa, tocino crujiente y queso parmesano.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Pasta Rotini Carbonara</h4>
+                            <span class="menu-card__price">$12.50</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="images/menu/almuerzos/cesar.png" alt="Ensalada César" class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                Lechuga orejona fresca, crotones crujientes, queso parmesano y aderezo César casero.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Ensalada César</h4>
+                            <span class="menu-card__price">$9.50</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <figure class="menu-card__photo">
+                            <img src="images/menu/almuerzos/carneasada.png" alt="Plato de Carne Asada"
+                                class="menu-card__img">
+
+                            <figcaption class="menu-card__overlay">
+                                Corte de carne de res a la plancha, acompañado de arroz blanco y ensalada fresca del
+                                día.
+                            </figcaption>
+                        </figure>
+
+                        <div class="menu-card__info">
+                            <h4 class="menu-card__title">Plato de Carne Asada</h4>
+                            <span class="menu-card__price">$14.00</span>
+                        </div>
+                    </div>
+
+
+                </article>
+
+
+                <!-------------------------- paninis------------------------------------------------------------ -->
 
 
                 <article class="menu-category menu-category--paninis">
@@ -261,7 +323,7 @@
                     </div>
                 </article>
 
-        <!-------------------------- postres------------------------------------------------------------ -->
+                <!-------------------------- postres------------------------------------------------------------ -->
 
 
                 <article class="menu-category menu-category--postres">
@@ -367,7 +429,8 @@
 
                     <div class="menu-card">
                         <figure class="menu-card__photo">
-                            <img src="images/menu/bebidas calientes/americano.png" alt="Café americano" class="menu-card__img">
+                            <img src="images/menu/bebidas calientes/americano.png" alt="Café americano"
+                                class="menu-card__img">
 
                             <figcaption class="menu-card__overlay">
                                 Clásico y reconfortante. Una extracción perfecta de espresso diluida en agua caliente
@@ -383,7 +446,8 @@
 
                     <div class="menu-card">
                         <figure class="menu-card__photo">
-                            <img src="images/menu/bebidas calientes/cappuccino.png" alt="Cappuccino" class="menu-card__img">
+                            <img src="images/menu/bebidas calientes/cappuccino.png" alt="Cappuccino"
+                                class="menu-card__img">
 
                             <figcaption class="menu-card__overlay">
                                 El balance perfecto entre intensidad y cremosidad. Una carga de espresso combinada con
@@ -415,7 +479,8 @@
 
                     <div class="menu-card">
                         <figure class="menu-card__photo">
-                            <img src="images/menu/bebidas calientes/macchiato.png" alt="Macchiato" class="menu-card__img">
+                            <img src="images/menu/bebidas calientes/macchiato.png" alt="Macchiato"
+                                class="menu-card__img">
 
                             <figcaption class="menu-card__overlay">
                                 Para quienes buscan un toque de fuerza. Un espresso corto "manchado" delicadamente con
@@ -431,7 +496,8 @@
 
                     <div class="menu-card">
                         <figure class="menu-card__photo">
-                            <img src="images/menu/bebidas calientes/tederosas.png" alt="Té de rosas" class="menu-card__img">
+                            <img src="images/menu/bebidas calientes/tederosas.png" alt="Té de rosas"
+                                class="menu-card__img">
 
                             <figcaption class="menu-card__overlay">
                                 Una infusión aromática y elegante. Pétalos de rosa seleccionados que ofrecen una
@@ -447,7 +513,8 @@
 
                     <div class="menu-card">
                         <figure class="menu-card__photo">
-                            <img src="images/menu/bebidas calientes/tedehierbabuena.png" alt="Té de hierbabuena" class="menu-card__img">
+                            <img src="images/menu/bebidas calientes/tedehierbabuena.png" alt="Té de hierbabuena"
+                                class="menu-card__img">
 
                             <figcaption class="menu-card__overlay">
                                 Frescura pura en una taza. Infusión de hojas de hierbabuena natural, ideal para digerir
@@ -462,14 +529,15 @@
                     </div>
                 </article>
 
-                    <!-------------------------- bebidas naturales------------------------------------------------------------ -->
+                <!-------------------------- bebidas naturales------------------------------------------------------------ -->
 
                 <article class="menu-category menu-category--bebidas-naturales">
                     <h3 class="menu-category__title">Bebidas Naturales</h3>
 
                     <div class="menu-card menu-grid-item1">
                         <figure class="menu-card__photo">
-                            <img src="images/menu/bebidas naturales/limonadafresa.png" alt="Limonada con fresa" class="menu-card__img limonada_fresa">
+                            <img src="images/menu/bebidas naturales/limonadafresa.png" alt="Limonada con fresa"
+                                class="menu-card__img limonada_fresa">
 
                             <figcaption class="menu-card__overlay">
                                 El equilibrio perfecto entre lo cítrico y lo dulce. Jugo de limón recién exprimido
@@ -485,7 +553,8 @@
 
                     <div class="menu-card menu-grid-item2">
                         <figure class="menu-card__photo">
-                            <img src="images/menu/bebidas naturales/limonadahierbabuena.png" alt="Limonada con hierbabuena" class="menu-card__img">
+                            <img src="images/menu/bebidas naturales/limonadahierbabuena.png"
+                                alt="Limonada con hierbabuena" class="menu-card__img">
 
                             <figcaption class="menu-card__overlay">
                                 Ultra refrescante y digestiva. Limonada clásica frappé mezclada con hojas frescas de
@@ -501,7 +570,8 @@
 
                     <div class="menu-card menu-grid-item3">
                         <figure class="menu-card__photo">
-                            <img src="images/menu/bebidas naturales/jugodepepino.png" alt="Jugo de pepino" class="menu-card__img">
+                            <img src="images/menu/bebidas naturales/jugodepepino.png" alt="Jugo de pepino"
+                                class="menu-card__img">
 
                             <figcaption class="menu-card__overlay">
                                 Ligero, hidratante y revitalizante. Jugo natural de pepino con un sutil toque de limón,
@@ -517,7 +587,8 @@
 
                     <div class="menu-card menu-grid-item4">
                         <figure class="menu-card__photo">
-                            <img src="images/menu/bebidas naturales/piñacoladavirgen.png" alt="Piña colada virgen" class="menu-card__img">
+                            <img src="images/menu/bebidas naturales/piñacoladavirgen.png" alt="Piña colada virgen"
+                                class="menu-card__img">
 
                             <figcaption class="menu-card__overlay">
                                 Un escape tropical sin alcohol. Mezcla cremosa de pulpa de piña natural y crema de coco,
@@ -532,20 +603,12 @@
                     </div>
                 </article>
 
-                        <!-------------------------- refrescos------------------------------------------------------------ -->
+                <!-------------------------- refrescos------------------------------------------------------------ -->
 
                 <article class="menu-category menu-category--refrescos">
                     <h3 class="menu-category__title">Refrescos</h3>
 
                     <div class="menu-card">
-                        <figure class="menu-card__photo">
-                            <img src="" alt="Coca-Cola" class="menu-card__img">
-
-                            <figcaption class="menu-card__overlay">
-                                Refresco clásico servido bien frío.
-                            </figcaption>
-                        </figure>
-
                         <div class="menu-card__info">
                             <h4 class="menu-card__title">Coca-Cola</h4>
                             <span class="menu-card__price">$1.75</span>
@@ -553,14 +616,6 @@
                     </div>
 
                     <div class="menu-card">
-                        <figure class="menu-card__photo">
-                            <img src="" alt="Pepsi" class="menu-card__img">
-
-                            <figcaption class="menu-card__overlay">
-                                Refresco clásico servido bien frío.
-                            </figcaption>
-                        </figure>
-
                         <div class="menu-card__info">
                             <h4 class="menu-card__title">Pepsi</h4>
                             <span class="menu-card__price">$1.75</span>
@@ -568,48 +623,28 @@
                     </div>
 
                     <div class="menu-card">
-                        <figure class="menu-card__photo">
-                            <img src="" alt="Mirinda" class="menu-card__img">
-
-                            <figcaption class="menu-card__overlay">
-                                Refresco sabor naranja, ideal para acompañar tus comidas.
-                            </figcaption>
-                        </figure>
-
                         <div class="menu-card__info">
                             <h4 class="menu-card__title">Mirinda</h4>
                             <span class="menu-card__price">$1.75</span>
                         </div>
+                        
                     </div>
 
                     <div class="menu-card">
-                        <figure class="menu-card__photo">
-                            <img src="" alt="Crema soda" class="menu-card__img">
-
-                            <figcaption class="menu-card__overlay">
-                                Bebida dulce y refrescante con sabor tradicional.
-                            </figcaption>
-                        </figure>
-
                         <div class="menu-card__info">
                             <h4 class="menu-card__title">Crema Soda</h4>
                             <span class="menu-card__price">$2.00</span>
                         </div>
+
+                        
                     </div>
 
                     <div class="menu-card">
-                        <figure class="menu-card__photo">
-                            <img src="" alt="Té Lipton" class="menu-card__img">
-
-                            <figcaption class="menu-card__overlay">
-                                Té frío disponible en diferentes variedades.
-                            </figcaption>
-                        </figure>
-
                         <div class="menu-card__info">
                             <h4 class="menu-card__title">Té Lipton (variedades)</h4>
                             <span class="menu-card__price">$2.25</span>
                         </div>
+                        
                     </div>
                 </article>
 
