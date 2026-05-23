@@ -134,6 +134,7 @@ body {
 
 .header__description {
     color: #F3E9D2;
+    font-family: var(--font-display);
 }
 
 /* NAV */
@@ -170,7 +171,7 @@ background-color: #4e301cbb;
     justify-content: center;
     height: 100vh;
 }
-.hero__text {
+.hero__container {
     display: flex;
     height: 100vh;
     flex-direction: column;
@@ -178,23 +179,50 @@ background-color: #4e301cbb;
 }
 .hero__title {
     font-size: 48px;
-
+    font-family: var(--font-display);
 }
 .hero__description {
     margin-top: 10px;
     font-size: 14px;
     margin-bottom: 10px;
+    font-family: var(--font-body);
 }
-.hero__buttons {
-    display: flex;
-    gap: 50px;
-}
-.hero__divprovisional{
+.hero__text{
     width: 55%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: auto auto;
+}
+/* ------------------------------- Botones - Hero ------------------------------- */
+.hero__buttons {
+    display: flex;
+    gap: 50px; 
+}
+
+.hero__button--menu {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #7b4a2af8;
+    border-radius: 10px;
+    color: #F3E9D2;
+    transition: background-color 0.3s ease;
+}
+.hero__button--menu:hover {
+    background-color: #7b4a2ad3;
+}
+.hero__button--info {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 2px solid #7b4a2af8;
+    border-radius: 10px;
+    background-color: #F3E9D2;
+    transition: background-color 0.3s ease;
+}
+.hero__button--info:hover {
+    background-color: rgba(255, 238, 199, 0.808);
 }
 .hero__image-container {
     display: flex;
@@ -222,6 +250,10 @@ background-color: #4e301cbb;
     scroll-margin-top: 75px;
 }
 
+.nosotros__title {
+    font-family: var(--font-display);
+    font-size: 48px;
+}
 
 /* descripcion------------------- */
 .nosotros__description{
@@ -287,6 +319,10 @@ background-color: #4e301cbb;
     scroll-margin-top: 75px;
     display: flex;
     flex-direction: column;
+}
+.menu__title {
+    font-family: var(--font-display);
+    font-size: 48px;
 }
 
 .menu-category{
