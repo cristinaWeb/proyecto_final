@@ -193,6 +193,7 @@ background-color: #4e301cbb;
 .description__img{
     width: 275px;
     border-radius: var(--radius-lg);
+    margin: auto;
 }
 
 
@@ -243,7 +244,7 @@ background-color: #4e301cbb;
 
 .menu-category{
 padding: 10px;
-background-color: #7b4a2ab2;
+background-color: #7b4a2a81;
 
 }
 
@@ -255,8 +256,12 @@ display: flex;
 font-size: var(--text-3xl);
 }
 
+.menu-card__info{
+    margin-top: var(--space-2);
+}
+
 .menu-card{
-background-color: #deeccc;      
+background-color: #f3e9d29c;      
 padding:10px 8px;
 width: 100%;
 }
@@ -268,21 +273,69 @@ margin: auto;
 }
 
 .menu-category--desayunos{
-border: 1px solid;
 display: grid;
 grid-template-columns: repeat(3,1fr);
 gap: var(--space-8);
 }
 
 .menu-category--paninis{
-border: 1px solid;
 display: grid;
 grid-template-columns: repeat(3,1fr);
 gap: var(--space-4);
 }
 
 .menu-category--postres{
-border: 1px solid;
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: var(--space-4);
+}
+
+.menu-category--bebidas-calientes{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: var(--space-4);
+
+}
+
+.menu-category--bebidas-naturales{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: var(--space-4);
+grid-template-areas: 
+"item1  item2  item3"
+"item1  item4  item3"
+
+;
+}
+
+.menu-grid-item1{
+    grid-area: item1;
+}
+
+.menu-grid-item2{
+    grid-area: item2;
+}
+
+.menu-grid-item3{
+    grid-area: item3;
+}
+
+.menu-grid-item4{
+    grid-area: item4;
+}
+
+.menu-grid-item5{
+    grid-area: item5;
+}
+
+
+
+.menu-category__title{
+    grid-column: 1/4;
+}
+
+
+.menu-category--refrescos{
 display: grid;
 grid-template-columns: repeat(3,1fr);
 gap: var(--space-4);
