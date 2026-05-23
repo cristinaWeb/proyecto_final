@@ -136,26 +136,23 @@ body {
     color: #F3E9D2;
 }
 
-.header__nav {
+/* .header__nav {
     display: flex;
-    align-items: center; /*Center*/
-}
+    align-items: center;----------no hace nada
 
 /* NAV */
 
 .nav__list {
     display: flex;
-    /* gap: 20px; */
     align-items: center;
     list-style: none;
     background-color: #222222e0;
 } 
 .nav__list-item {
     display: flex;
-    width: 100%;
 }
 .nav__list-link{
-flex: 1 0 0;
+flex: 1 0 0;   /*  no hace nada --------------------*/
 color: #deeccc;
 padding: 25px 40px;
 transition: 0.5s ease;
@@ -275,7 +272,7 @@ margin: auto;
 .menu-category--desayunos{
 display: grid;
 grid-template-columns: repeat(3,1fr);
-gap: var(--space-8);
+gap: var(--space-4);
 }
 
 .menu-category--paninis{
@@ -302,6 +299,7 @@ display: grid;
 grid-template-columns: repeat(3,1fr);
 gap: var(--space-4);
 grid-template-areas: 
+"title  title  title "
 "item1  item2  item3"
 "item1  item4  item3"
 
@@ -339,4 +337,69 @@ grid-template-areas:
 display: grid;
 grid-template-columns: repeat(3,1fr);
 gap: var(--space-4);
+}
+
+
+@media (max-width: 768px) {
+
+    body{
+    max-width: 768px;
+    }
+
+    .header {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .nav__list-link{
+    padding: 15px;
+  
+    }
+
+    .menu-category__title{
+        grid-column:1
+    }
+
+    .menu-category--desayunos,
+    .menu-category--paninis,
+    .menu-category--postres,
+    .menu-category--bebidas-calientes,
+    .menu-category--bebidas-naturales,
+    .menu-category--refrescos,
+    .creencias {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-category--desayunos{
+    grid-template-columns: 1fr;
+    grid-template-rows:repeat(3,auto)
+    }
+
+    .menu-category--bebidas-naturales{
+    grid-template-areas:
+    "title"
+    "item1"
+    "item2"
+    "item3"
+    "item4"
+    }
+
+    .nosotros__description {
+    display:flex;
+    flex-direction: column;
+
+    }
+    .description__img{
+    margin-top:var(--space-4);
+
+    }
+
+    .header__nav{
+        width: 100%;
+        
+    }
+
+    .nav{
+        width: 100%;
+    }
 }
