@@ -1,5 +1,2 @@
 # proyecto_final
-Hago este commit porque me quiero aventurar a experimentar y es como un punto de guardado por si la cago
-Los amo cerotes
-
-YA SE ME FUE EL INTERNET - ño
+esta fue la experimentacion, aul le falta que arreflar pero la idea esta, movi lo de seccion nosotros

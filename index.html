@@ -16,6 +16,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
         rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -25,7 +29,7 @@
     <header class="header">
         <div class="header__container">
             <div class="header__logo">
-                <img src="images/logo.png" alt="logo de bistro KAF" class="header__logo-img">
+                <img src="images/logo2.png" alt="logo de bistro KAF" class="header__logo-img">
             </div>
 
 
@@ -90,7 +94,8 @@
 
             <article class="nosotros__description">
                 <div class="description__content">
-                    <h3 class="description__content-title">Descripción</h3>
+                    <div class="nosotros__icon"><i class="fa-solid fa-plant-wilt creencias__icon"></i></div>
+                    <h3 class="description__content-title">Nuestra esencia</h3>
                     <p class="description__content-text">
                         En Bistro KAF, creemos que los mejores momentos se disfrutan alrededor de buena comida y un
                         ambiente
@@ -113,43 +118,61 @@
                         de sabor, tranquilidad y buenos recuerdos.
                     </p>
                 </div>
+                <div class="description__image-container">
+                    <img src="images/pasantes_becados2.png" alt="Imagen de becados siendo explotados laboralmente"
+                        class="description__img">
+                </div>
 
-                <img src="images/pasantes_becados2.png" alt="Imagen de becados siendo explotados laboralmente"
-                    class="description__img">
 
             </article>
 
-            <div class="creencias">
+            <article class="creencias">
 
-                <article class="grid-item nosotros__vision">
-                    <h3 class="title vision__title">Visión</h3>
-                    <p class="creencias-text vision__content">Ser uno de los bistrós más reconocidos de Jocoro,
-                        distinguiéndonos por
-                        nuestra calidad, calidez, excelente atención y la experiencia agradable que ofrecemos a nuestros
-                        clientes.</p>
-                </article>
+                <div class="grid-item nosotros__vision">
+                    <div class="creencias__icon-container"><i class="fa-solid fa-eye creencias__icon"></i></div>
 
-                <article class="grid-item nosotros__mision">
-                    <h3 class="title mision__title">Misión</h3>
-                    <p class="creencias-text mision__content ">Brindar comodidad y satisfacción a nuestros clientes
-                        mediante alimentos,
-                        bebidas y postres caseros de calidad, acompañados de un servicio amable y un ambiente acogedor
-                        que
-                        haga sentir a cada persona como en casa.</p>
-                </article>
+                    <div class="nosotros__vision-content">
+                        <h3 class="title vision__title">Visión</h3>
+                        <p class="creencias-text vision__content">Ser uno de los bistrós más reconocidos de Jocoro,
+                            distinguiéndonos por
+                            nuestra calidad, calidez, excelente atención y la experiencia agradable que ofrecemos a
+                            nuestros
+                            clientes.</p>
+                    </div>
+                </div>
 
-                <article class="grid-item  nosotros__valores">
-                    <h3 class="title valores__title">Valores</h3>
-                    <ul class="creencias-text valores__list ">
-                        <li class="valores__item">Calidad</li>
-                        <li class="valores__item">Confianza</li>
-                        <li class="valores__item">Buen servicio</li>
-                        <li class="valores__item">Responsabilidad</li>
-                        <li class="valores__item">Compromiso con la satisfacción del cliente</li>
-                    </ul>
-                </article>
+                <div class="grid-item nosotros__mision">
+                    <div class="creencias__icon-container"><i class="fa-solid fa-bullseye creencias__icon"></i></div>
 
-            </div>
+                    <div class="nosotros__vision-content">
+                        <h3 class="title mision__title">Misión</h3>
+                        <p class="creencias-text mision__content ">Brindar comodidad y satisfacción a nuestros clientes
+                            mediante alimentos,
+                            bebidas y postres caseros de calidad, acompañados de un servicio amable y un ambiente
+                            acogedor
+                            que
+                            haga sentir a cada persona como en casa.</p>
+                    </div>
+
+                </div>
+
+                <div class="grid-item  nosotros__valores">
+                    <div class="creencias__icon-container"><i class="fa-regular fa-heart creencias__icon"></i></div>
+                    
+                    <div class="nosotros__vision-content">
+                        <h3 class="title valores__title">Valores</h3>
+                        <ul class="creencias-text valores__list ">
+                            <li class="valores__item">Calidad</li>
+                            <li class="valores__item">Confianza</li>
+                            <li class="valores__item">Buen servicio</li>
+                            <li class="valores__item">Responsabilidad</li>
+                            <li class="valores__item">Compromiso con la satisfacción del cliente</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </article>
 
         </section>
 
@@ -627,7 +650,7 @@
                             <h4 class="menu-card__title">Mirinda</h4>
                             <span class="menu-card__price">$1.75</span>
                         </div>
-                        
+
                     </div>
 
                     <div class="menu-card">
@@ -636,7 +659,7 @@
                             <span class="menu-card__price">$2.00</span>
                         </div>
 
-                        
+
                     </div>
 
                     <div class="menu-card">
@@ -644,7 +667,7 @@
                             <h4 class="menu-card__title">Té Lipton (variedades)</h4>
                             <span class="menu-card__price">$2.25</span>
                         </div>
-                        
+
                     </div>
                 </article>
 
