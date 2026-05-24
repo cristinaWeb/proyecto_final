@@ -407,7 +407,7 @@ pero que cuando pase el mouse por encima de la imagen muestre la
 descripcion en la parte inferior dentro de la imagen y aparezca 
 como un pequeño sombreado abajo*/
 }
-/* EL EXPERIMENTO OVERLAY UWU 777 */
+/* -------------------------------------EL EXPERIMENTO OVERLAY UWU 777 */
 .menu-card__photo {
     position: relative;
     width: 100%;
@@ -472,13 +472,12 @@ como un pequeño sombreado abajo*/
 
 .menu-category--bebidas-naturales {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-4);
     grid-template-areas:
-        "title  title  title "
-        "item1  item2  item3"
-        "item1  item4  item3"
-
+        "title  title"
+        "item1  item2"
+        "item3  item4"
     ;
 }
 
@@ -603,6 +602,10 @@ como un pequeño sombreado abajo*/
     .hero__image-container {
         display: flex;
 
+    }
+
+    .menu-card__overlay{
+        opacity:1
     }
 
     /* order: -1;pa cambiar orde en la posicion del elemento no sabia XD */
