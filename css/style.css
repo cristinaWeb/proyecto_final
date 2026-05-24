@@ -474,13 +474,29 @@ gap: var(--space-4);
     align-items: center;
     }
 
+    
+    .header__nav{
+        width: 100%;
+        
+    }
+
+
     .nav__list-link{
-    padding: 15px;
-  
+    padding: 10px 15px;
+    width:150px;
+    text-align: center;
     }
 
     .menu-category__title{
         grid-column:1
+    }
+
+    .nav__list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
     }
 
     .menu-category--desayunos,
@@ -489,7 +505,8 @@ gap: var(--space-4);
     .menu-category--bebidas-calientes,
     .menu-category--bebidas-naturales,
     .menu-category--refrescos,
-    .creencias {
+    .creencias ,
+    .menu-category--almuerzos{
         grid-template-columns: 1fr;
     }
 
@@ -507,6 +524,11 @@ gap: var(--space-4);
     "item4"
     }
 
+    .menu__title{
+        margin-top: 325px;    
+        /* intento de arreglo momentaneo pero no sirve bien cuando se hace mas pequenia la pantalla */
+    }
+
     .nosotros__description {
     display:flex;
     flex-direction: column;
@@ -517,12 +539,16 @@ gap: var(--space-4);
 
     }
 
-    .header__nav{
-        width: 100%;
-        
+
+    .hero__image-container,
+    .hero__content{
+        display:flex ;
+
     }
 
-    .nav{
-        width: 100%;
+    .hero__image-container{
+        display:flex;
+
     }
+/* order: -1;pa cambiar orde en la posicion del elemento no sabia XD */ 
 }
