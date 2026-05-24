@@ -1,4 +1,5 @@
 # proyecto_final
-esta fue la experimentacion, aul le falta que arreflar pero la idea esta, movi lo de seccion nosotros
-
-Armando perdoname todo
+Hice cambios por los menues, ahi esta el comentario
+24/05/26
+10:04 Am
+Keny

@@ -90,6 +90,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -107,7 +108,7 @@ body {
 
 /* provicional */
 
-.header__logo{
+.header__logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,6 +119,7 @@ body {
     justify-content: center;
     padding: 8px;
 }
+
 .header {
     display: flex;
     background-color: #7b4a2af8;
@@ -144,59 +146,68 @@ body {
     align-items: center;
     list-style: none;
     background-color: #222222e0;
-} 
+}
+
 .nav__list-item {
     display: flex;
 }
-.nav__list-link{
-color: #deeccc;
-padding: 25px 40px;
-transition: 0.3s ease;
-background-color: #4e301c7c;
-font-weight: 700;
-font-size: 22px;
+
+.nav__list-link {
+    color: #deeccc;
+    padding: 25px 40px;
+    transition: 0.3s ease;
+    background-color: #4e301c7c;
+    font-weight: 700;
+    font-size: 22px;
 }
 
 .nav__list-link:hover {
-background-color: #aa846b; /*Cambie color si no les gusta pues quitenlo y ya*/ 
+    background-color: #aa846b;
+    /*Cambie color si no les gusta pues quitenlo y ya*/
 }
 
 /* ------------------------------- Seccion Hero ------------------------------- */
 .hero {
     scroll-margin-top: 80px;
 }
+
 .hero__content {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 89vh;
 }
+
 .hero__container {
     display: flex;
     flex-direction: column;
     flex: 6 1 0;
 }
+
 .hero__title {
     font-size: 48px;
     font-family: var(--font-display);
 }
+
 .hero__description {
     margin-top: 10px;
     font-size: 14px;
     margin-bottom: 10px;
     font-family: var(--font-body);
 }
-.hero__text{
+
+.hero__text {
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: auto auto;
 }
+
 /* ------------------------------- Botones - Hero ------------------------------- */
 .hero__buttons {
     display: flex;
-    gap: 50px; 
+    gap: 50px;
 }
 
 .hero__button--menu {
@@ -208,9 +219,11 @@ background-color: #aa846b; /*Cambie color si no les gusta pues quitenlo y ya*/
     color: #F3E9D2;
     transition: background-color 0.3s ease;
 }
+
 .hero__button--menu:hover {
     background-color: #7b4a2ad3;
 }
+
 .hero__button--info {
     display: flex;
     align-items: center;
@@ -220,19 +233,23 @@ background-color: #aa846b; /*Cambie color si no les gusta pues quitenlo y ya*/
     background-color: #F3E9D2;
     transition: background-color 0.3s ease;
 }
+
 .hero__button--info:hover {
     background-color: rgba(255, 238, 199, 0.808);
 }
+
 .hero__image-container {
     display: flex;
     height: 100%;
     flex: 4 1 0;
 }
+
 .hero__image-containerimg {
     display: flex;
     align-items: center;
     justify-content: start;
 }
+
 .hero__image {
     width: 85%;
     height: auto;
@@ -242,9 +259,9 @@ background-color: #aa846b; /*Cambie color si no les gusta pues quitenlo y ya*/
 
 /*-------------------------------- seccion nosotros ----------------------------*/
 
-.nosotros{
-    padding: 10px; 
-    background-color:#5d463749;
+.nosotros {
+    padding: 10px;
+    background-color: #5d463749;
     height: auto;
     scroll-margin-top: 75px;
 }
@@ -256,7 +273,7 @@ background-color: #aa846b; /*Cambie color si no les gusta pues quitenlo y ya*/
     font-size: 48px;
 }
 
-.nosotros__description{
+.nosotros__description {
     display: flex;
     margin-bottom: 20px;
 }
@@ -267,7 +284,7 @@ background-color: #aa846b; /*Cambie color si no les gusta pues quitenlo y ya*/
     color: rgba(231, 224, 123, 0.767);
 }
 
-.description__content{
+.description__content {
     display: flex;
     flex-direction: column;
     flex: 5 1 0;
@@ -278,7 +295,7 @@ background-color: #aa846b; /*Cambie color si no les gusta pues quitenlo y ya*/
     width: 100%;
 }
 
-.description__content-text{
+.description__content-text {
     padding-block: var(--space-2);
     color: #ece7cc;
 }
@@ -289,7 +306,8 @@ background-color: #aa846b; /*Cambie color si no les gusta pues quitenlo y ya*/
     flex: 5 1 0;
     margin: 10px;
 }
-.description__img{
+
+.description__img {
     border-radius: var(--radius-lg);
     margin: auto;
     object-fit: cover;
@@ -301,13 +319,15 @@ background-color: #aa846b; /*Cambie color si no les gusta pues quitenlo y ya*/
 
 /* --------------------------valores y demas------------------------------------------- */
 
-.creencias{
+.creencias {
     margin-top: var(--space-3);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-5);
-    align-content: center; /*Añadi esto*/
+    align-content: center;
+    /*Añadi esto*/
 }
+
 .creencias__icon-container {
     margin-right: 10px;
 }
@@ -322,12 +342,12 @@ background-color: #aa846b; /*Cambie color si no les gusta pues quitenlo y ya*/
     border-radius: 50%;
 }
 
-.title{
+.title {
     color: rgba(231, 224, 123, 0.767);
     border-bottom: 3px solid black;
 }
 
-.grid-item{
+.grid-item {
     display: flex;
     background-color: #7b4a2ab2;
     padding: var(--space-4);
@@ -335,11 +355,11 @@ background-color: #aa846b; /*Cambie color si no les gusta pues quitenlo y ya*/
     color: #ece7cc;
 }
 
-.creencias-text{
+.creencias-text {
     margin-top: var(--space-3);
 }
 
-.valores__list{
+.valores__list {
     list-style-type: none;
 }
 
@@ -347,156 +367,189 @@ background-color: #aa846b; /*Cambie color si no les gusta pues quitenlo y ya*/
 
 /* -------------------------menu desayunos ----------------------------- */
 
-.menu{
+.menu {
     scroll-margin-top: 75px;
     display: flex;
     flex-direction: column;
 }
+
 .menu__title {
     font-family: var(--font-display);
     font-size: 48px;
 }
 
-.menu-category{
-padding: 10px;
-background-color: #7b4a2a81;
+.menu-category {
+    padding: 10px;
+    background-color: #7b4a2a81;
 
 }
 
 
-.menu-category__title{
-margin-top: var(--space-4);
-justify-content: center;
-display: flex;
-font-size: var(--text-3xl);
+.menu-category__title {
+    margin-top: var(--space-4);
+    justify-content: center;
+    display: flex;
+    font-size: var(--text-3xl);
 }
 
-.menu-card__info{
+.menu-card__info {
     margin-top: var(--space-2);
 }
 
-.menu-card{
-background-color: #f3e9d29c;      
-padding:10px 8px;
-width: 100%;
+.menu-card {
+    background-color: #f3e9d29c;
+    padding: 10px 8px;
+    width: 100%;
+    /* Es para hacer algo con los grids 
+Quiero hacer que esto funcione de esta manera: 
+Que este la imagen, el nombre abajo y la descripcion escondida, 
+pero que cuando pase el mouse por encima de la imagen muestre la 
+descripcion en la parte inferior dentro de la imagen y aparezca 
+como un pequeño sombreado abajo*/
+}
+/* EL EXPERIMENTO OVERLAY UWU 777 */
+.menu-card__photo {
+    position: relative;
+    width: 100%;
+    height: 425px;
+    overflow: hidden;
+}
+    .menu-card__img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    }
+    
+
+    .menu-card__overlay {
+    width: 100%;
+    color: #ffffff;
+    opacity: 0;
+    padding: 10px 20px;
+    bottom: 0;
+    left: 0px;
+    position: absolute;
+    transition: background 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    background: #000000;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .menu-card__photo:hover .menu-card__overlay /* Este es el que hace que se haga oscuro abajo*/ {
+            opacity: 1;
+    }
+
+.menu-category--almuerzos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
 }
 
-.menu-card__img{
-width: 50%;
-display: flex;
-margin: auto;
-}
-.menu-category--almuerzos{
-display: grid;
-grid-template-columns: repeat(3,1fr);
-gap: var(--space-4);
+.menu-category--desayunos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
 }
 
-.menu-category--desayunos{
-display: grid;
-grid-template-columns: repeat(3,1fr);
-gap: var(--space-4);
+.menu-category--paninis {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
 }
 
-.menu-category--paninis{
-display: grid;
-grid-template-columns: repeat(3,1fr);
-gap: var(--space-4);
+.menu-category--postres {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
 }
 
-.menu-category--postres{
-display: grid;
-grid-template-columns: repeat(3,1fr);
-gap: var(--space-4);
-}
-
-.menu-category--bebidas-calientes{
-display: grid;
-grid-template-columns: repeat(3,1fr);
-gap: var(--space-4);
+.menu-category--bebidas-calientes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
 
 }
 
-.menu-category--bebidas-naturales{
-display: grid;
-grid-template-columns: repeat(3,1fr);
-gap: var(--space-4);
-grid-template-areas: 
-"title  title  title "
-"item1  item2  item3"
-"item1  item4  item3"
+.menu-category--bebidas-naturales {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+    grid-template-areas:
+        "title  title  title "
+        "item1  item2  item3"
+        "item1  item4  item3"
 
-;
+    ;
 }
 
-.menu-grid-item1{
+.menu-grid-item1 {
     grid-area: item1;
 }
 
-.menu-grid-item2{
+.menu-grid-item2 {
     grid-area: item2;
 }
 
-.menu-grid-item3{
+.menu-grid-item3 {
     grid-area: item3;
 }
 
-.menu-grid-item4{
+.menu-grid-item4 {
     grid-area: item4;
 }
 
-.menu-grid-item5{
+.menu-grid-item5 {
     grid-area: item5;
 }
 
 
 
-.menu-category__title{
+.menu-category__title {
     grid-column: 1/4;
 }
 
 
-.menu-category--refrescos{
-display: grid;
-grid-template-columns: repeat(3,1fr);
-gap: var(--space-4);
+.menu-category--refrescos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
 }
 
 
 @media (max-width: 768px) {
 
-    body{
-    max-width: 768px;
+    body {
+        max-width: 768px;
     }
 
     .header {
-    flex-direction: column;
-    align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
 
-    
-    .header__nav{
+
+    .header__nav {
         width: 100%;
-        
+
     }
 
 
-    .nav__list-link{
-    padding: 10px 15px;
-    width:150px;
-    text-align: center;
+    .nav__list-link {
+        padding: 10px 15px;
+        width: 150px;
+        text-align: center;
     }
 
-    .menu-category__title{
-        grid-column:1
+    .menu-category__title {
+        grid-column: 1
     }
 
-    .nav__list{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px;
+    .nav__list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
     }
 
     .menu-category--desayunos,
@@ -505,50 +558,52 @@ gap: var(--space-4);
     .menu-category--bebidas-calientes,
     .menu-category--bebidas-naturales,
     .menu-category--refrescos,
-    .creencias ,
-    .menu-category--almuerzos{
+    .creencias,
+    .menu-category--almuerzos {
         grid-template-columns: 1fr;
     }
 
-    .menu-category--desayunos{
-    grid-template-columns: 1fr;
-    grid-template-rows:repeat(3,auto)
+    .menu-category--desayunos {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto)
     }
 
-    .menu-category--bebidas-naturales{
-    grid-template-areas:
-    "title"
-    "item1"
-    "item2"
-    "item3"
-    "item4"
+    .menu-category--bebidas-naturales {
+        grid-template-areas:
+            "title"
+            "item1"
+            "item2"
+            "item3"
+            "item4"
     }
 
-    .menu__title{
-        margin-top: 325px;    
+    .menu__title {
+        margin-top: 325px;
         /* intento de arreglo momentaneo pero no sirve bien cuando se hace mas pequenia la pantalla */
     }
 
     .nosotros__description {
-    display:flex;
-    flex-direction: column;
+        display: flex;
+        flex-direction: column;
 
     }
-    .description__img{
-    margin-top:var(--space-4);
+
+    .description__img {
+        margin-top: var(--space-4);
 
     }
 
 
     .hero__image-container,
-    .hero__content{
-        display:flex ;
+    .hero__content {
+        display: flex;
 
     }
 
-    .hero__image-container{
-        display:flex;
+    .hero__image-container {
+        display: flex;
 
     }
-/* order: -1;pa cambiar orde en la posicion del elemento no sabia XD */ 
+
+    /* order: -1;pa cambiar orde en la posicion del elemento no sabia XD */
 }
