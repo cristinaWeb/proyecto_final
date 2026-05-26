@@ -191,7 +191,7 @@ body {
 
 .hero__description {
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 10px;
     font-family: var(--font-body);
 }
@@ -260,10 +260,12 @@ body {
 /*-------------------------------- seccion nosotros ----------------------------*/
 
 .nosotros {
+    margin: 0 auto;
     padding: 10px;
-    background-color: #5d463749;
+    background-color: transparent;
     height: auto;
     scroll-margin-top: 75px;
+    max-width: 1140px;
 }
 
 .nosotros__title {
@@ -423,9 +425,9 @@ como un pequeño sombreado abajo*/
 .menu-card__photo {
     position: relative;
     width: 100%;
-    height: 425px;
+    height: auto;
     overflow: hidden;
-    border-radius: 30px 30px 0px 0px;
+    border-radius: 20px 20px 0px 0px;
     border-bottom: 2px solid #ffffff88;
 }
     .menu-card__img {
@@ -482,10 +484,10 @@ como un pequeño sombreado abajo*/
     grid-area: americano;
 }
 .menu-card__photo--omelet {
-    height: 500px;
+    height: 420px;
 }
 .menu-card__photo--tradicional, .menu-card__photo--americano {
-    height: 212px;
+    height: 200px;
 }
 
 
@@ -509,10 +511,10 @@ como un pequeño sombreado abajo*/
     grid-area: ensalada;
 }
 .menu-card__photo--carne {
-    height: 500px;
+    height: 420px;
 }
 .menu-card__photo--pasta, .menu-card__photo--ensalada {
-    height: 212px;
+    height: 200px; 
 }
 
 
@@ -535,10 +537,10 @@ como un pequeño sombreado abajo*/
     grid-area: pizza;
 }
 .menu-card__photo--tocino {
-    height: 500px;
+    height: 420px;
 }
 .menu-card__photo--pizza, .menu-card__photo--jamon {
-    height: 212px;
+    height: 200px;
 }
 
 .menu-category--postres {
@@ -571,10 +573,10 @@ como un pequeño sombreado abajo*/
 }
 
 .menu-card__photo--crepas, .menu-card__photo--empanadas, .menu-card__photo--tresleches, .menu-card__photo--pie {
-    height: 212px;
+    height: 200px;
 }
 .menu-card__photo--tartaletas, .menu-card__photo--cheesecake {
-    height: 500px;
+    height: 420px;
 }
 
 .menu-category--bebidas-calientes {
