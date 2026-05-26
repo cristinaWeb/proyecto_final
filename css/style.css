@@ -369,8 +369,11 @@ body {
 
 .menu {
     scroll-margin-top: 75px;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    
 }
 
 .menu__title {
@@ -379,9 +382,10 @@ body {
 }
 
 .menu-category {
-    padding: 10px;
+    padding: 20px 50px;
     background-color: #7b4a2a81;
-
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 
@@ -396,10 +400,18 @@ body {
     margin-top: var(--space-2);
 }
 
+.menu__container {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+}
+
 .menu-card {
     background-color: #f3e9d29c;
     padding: 10px 8px;
     width: 100%;
+    border-radius: 30px;
     /* Es para hacer algo con los grids 
 Quiero hacer que esto funcione de esta manera: 
 Que este la imagen, el nombre abajo y la descripcion escondida, 
@@ -413,6 +425,8 @@ como un pequeño sombreado abajo*/
     width: 100%;
     height: 425px;
     overflow: hidden;
+    border-radius: 30px 30px 0px 0px;
+    border-bottom: 2px solid #ffffff88;
 }
     .menu-card__img {
     width: 100%;
@@ -439,28 +453,128 @@ como un pequeño sombreado abajo*/
             opacity: 1;
     }
 
-.menu-category--almuerzos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-4);
-}
+    .menu-card__ico {
+        position: absolute;
+        top: 8px;
+        color: rgba(231, 224, 123, 0.767);;
+        font-size: 44px;
+    }
+
 
 .menu-category--desayunos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "title title title"
+    "omelet omelet tradicional"
+    "omelet omelet americano";
+    gap: var(--space-4);
+}
+.menu-category__title {
+    grid-area: title;
+}
+.menu-card--omelet {
+    grid-area: omelet;
+}
+.menu-card--tradicional {
+    grid-area: tradicional;
+}
+.menu-card--americano {
+    grid-area: americano;
+}
+.menu-card__photo--omelet {
+    height: 500px;
+}
+.menu-card__photo--tradicional, .menu-card__photo--americano {
+    height: 212px;
+}
+
+
+.menu-category--almuerzos {
+    display: grid;
+    justify-items: center;
+    grid-template-areas: 
+    "title title title"
+    "carne carne pasta"
+    "carne carne ensalada";
     gap: var(--space-4);
 }
 
+.menu-card--carne {
+    grid-area: carne;
+}
+.menu-card--pasta {
+    grid-area: pasta;
+}
+.menu-card--ensalada {
+    grid-area: ensalada;
+}
+.menu-card__photo--carne {
+    height: 500px;
+}
+.menu-card__photo--pasta, .menu-card__photo--ensalada {
+    height: 212px;
+}
+
+
 .menu-category--paninis {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "title title title"
+    "tocino tocino jamon"
+    "tocino tocino pizza";
     gap: var(--space-4);
+}
+
+.menu-card--tocino {
+    grid-area: tocino;
+}
+.menu-card--jamon {
+    grid-area: jamon;
+}
+.menu-card--pizza {
+    grid-area: pizza;
+}
+.menu-card__photo--tocino {
+    height: 500px;
+}
+.menu-card__photo--pizza, .menu-card__photo--jamon {
+    height: 212px;
 }
 
 .menu-category--postres {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "title title title"
+    "cheesecake cheesecake tresleches"
+    "cheesecake cheesecake empanadas"
+    "tartaletas tartaletas crepas"
+    "tartaletas tartaletas pie";
     gap: var(--space-4);
+}
+.menu-card--cheesecake {
+    grid-area: cheesecake;
+}
+.menu-card--tartaletas {
+    grid-area: tartaletas;
+}
+.menu-card--tresleches {
+    grid-area: tresleches;
+}
+.menu-card--empanadas {
+    grid-area: empanadas;
+}
+.menu-card--crepas {
+    grid-area: crepas;
+}
+.menu-card--pie {
+    grid-area: pie;
+}
+
+.menu-card__photo--crepas, .menu-card__photo--empanadas, .menu-card__photo--tresleches, .menu-card__photo--pie {
+    height: 212px;
+}
+.menu-card__photo--tartaletas, .menu-card__photo--cheesecake {
+    height: 500px;
 }
 
 .menu-category--bebidas-calientes {
