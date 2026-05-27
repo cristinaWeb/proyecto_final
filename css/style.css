@@ -505,6 +505,7 @@ body {
 
 .menu-card__photo--tradicional,
 .menu-card__photo--desayunoamericano {
+    max-width: 325px;
     width: auto;
     height: 200px;
 }
@@ -543,6 +544,7 @@ body {
 
 .menu-card__photo--pasta,
 .menu-card__photo--ensalada {
+    max-width: 325px;
     width: auto;
     height: 200px;
 }
@@ -575,12 +577,14 @@ body {
 }
 
 .menu-card__photo--tocino {
+    max-width: 325px;
     width: auto;
     height: 460px;
 }
 
 .menu-card__photo--pizza,
 .menu-card__photo--jamon {
+    max-width: 325px;
     width: auto;
     height: 200px;
 }
@@ -635,6 +639,7 @@ body {
 .menu-card__photo--empanadas,
 .menu-card__photo--tresleches,
 .menu-card__photo--pie {
+    max-width: 325px;
     width: auto;
     height: 200px;
 }
@@ -724,6 +729,7 @@ body {
 .menu-card__photo--limonadahierbabuena,
 .menu-card__photo--jugopepino,
 .menu-card__photo--piñacolada {
+    max-width: 325px;
     width: 100%;
     height: 400px;
 }
