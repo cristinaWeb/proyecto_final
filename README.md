@@ -11,8 +11,10 @@ cambios en la opacidad del texto en diseño responsive y cambios en el apartado 
 10:22 am 
 armando
 
+cambios en el disenio responsive y algunso cambios a las imagenes y como se ajustan(en el apartado de bebidas naturales) 
+27/05/26
 
-
+armando
 
 
 
