@@ -1,25 +1,33 @@
+/* ================================================================
+   VARIABLES
+================================================================ */
+
 :root {
-    /* Paleta de colores */
-    --color-bg: #faf9f7;
-    /* Fondo principal: blanco cálido */
-    --color-surface: #ffffff;
-    /* Superficie de tarjetas */
-    --color-dark: #1a1714;
-    /* Texto principal */
-    --color-dark-soft: #3d3832;
-    /* Texto secundario */
-    --color-muted: #8c8278;
-    /* Texto de apoyo */
-    --color-accent: #b5884a;
-    /* Dorado fotográfico */
-    --color-accent-light: #e8d5b0;
-    /* Acento claro */
-    --color-border: #e5e0d8;
-    /* Bordes suaves */
-    --color-dark-bg: #1a1714;
-    /* Fondo secciones oscuras */
-    --color-dark-surface: #242019;
-    /* Superficie en oscuro */
+    /* ----- Paleta de colores Bistro KAF ----- */
+    --color-fondo: #F6EFE5;
+    --color-superficie: #FFFaf3;
+
+    --color-cafe: #6B3F2A;
+    --color-cafe-oscuro: #2B1A12;
+    --color-moka: #D8B89A;
+
+    --color-dorado: #C9935B;
+    --color-verde: #7E8F74;
+
+    --color-texto: #2B1A12;
+    --color-texto-claro: #FFFaf3;
+
+    /* Transparencias */
+    --color-cafe-card: rgba(107, 63, 42, 0.82);
+    --color-cafe-section: rgba(107, 63, 42, 0.18);
+    --color-superficie-card: rgba(255, 250, 243, 0.78);
+    --color-borde-claro: rgba(255, 250, 243, 0.55);
+
+    /* Overlay */
+    --overlay-menu: linear-gradient(0deg,
+            rgba(43, 26, 18, 0.95) 0%,
+            rgba(43, 26, 18, 0.55) 50%,
+            rgba(43, 26, 18, 0) 100%);
 
     /* Tipografía */
     --font-display: "Playfair Display", Georgia, serif;
@@ -27,25 +35,15 @@
 
     /* Tamaños de fuente */
     --text-xs: 0.75rem;
-    /*  12px */
     --text-sm: 0.875rem;
-    /*  14px */
     --text-base: 1rem;
-    /*  16px */
     --text-lg: 1.125rem;
-    /*  18px */
     --text-xl: 1.25rem;
-    /*  20px */
     --text-2xl: 1.5rem;
-    /*  24px */
     --text-3xl: 1.875rem;
-    /*  30px */
     --text-4xl: 2.25rem;
-    /*  36px */
     --text-5xl: 3rem;
-    /*  48px */
     --text-6xl: 3.75rem;
-    /*  60px */
 
     /* Espaciado */
     --space-1: 0.25rem;
@@ -68,9 +66,9 @@
     --radius-full: 9999px;
 
     /* Sombras */
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.10);
-    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.14);
+    --shadow-sm: 0 1px 3px rgba(43, 26, 18, 0.08);
+    --shadow-md: 0 4px 16px rgba(43, 26, 18, 0.10);
+    --shadow-lg: 0 8px 32px rgba(43, 26, 18, 0.14);
 
     /* Ancho máximo del contenedor */
     --container-max: 1100px;
@@ -83,8 +81,9 @@
 
 
 /* ================================================================
-   2. RESET Y BASE
+   RESET Y BASE
 ================================================================ */
+
 * {
     margin: 0;
     padding: 0;
@@ -97,16 +96,34 @@ html {
 
 a {
     text-decoration: none;
-    color: black;
+    color: var(--color-texto);
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto;
-    background-color: #F3E9D2;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
 }
 
-/* provicional */
+
+/* ================================================================
+   HEADER Y NAVEGACIÓN
+================================================================ */
+
+.header {
+    display: flex;
+    background-color: var(--color-cafe);
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+}
 
 .header__logo {
     display: flex;
@@ -120,32 +137,16 @@ body {
     padding: 8px;
 }
 
-.header {
-    display: flex;
-    background-color: #7b4a2af8;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.header__container {
-    display: flex;
-    align-items: center;
-}
-
 .header__description {
-    color: #F3E9D2;
+    color: var(--color-texto-claro);
     font-family: var(--font-display);
 }
-
-/* NAV */
 
 .nav__list {
     display: flex;
     align-items: center;
     list-style: none;
-    background-color: #222222e0;
+    background-color: var(--color-cafe-oscuro);
 }
 
 .nav__list-item {
@@ -153,21 +154,26 @@ body {
 }
 
 .nav__list-link {
-    color: #deeccc;
+    color: var(--color-texto-claro);
     padding: 25px 40px;
     transition: 0.3s ease;
-    background-color: #4e301c7c;
+    background-color: var(--color-cafe);
     font-weight: 700;
     font-size: 22px;
 }
 
 .nav__list-link:hover {
-    background-color: #aa846b;
-    /*Cambie color si no les gusta pues quitenlo y ya*/
+    background-color: var(--color-dorado);
 }
 
-/* ------------------------------- Seccion Hero ------------------------------- */
+
+/* ================================================================
+   HERO
+================================================================ */
+
 .hero {
+    margin: 0 auto;
+    max-width: 1100px;
     scroll-margin-top: 80px;
 }
 
@@ -184,6 +190,14 @@ body {
     flex: 6 1 0;
 }
 
+.hero__text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto auto;
+}
+
 .hero__title {
     font-size: 48px;
     font-family: var(--font-display);
@@ -196,15 +210,6 @@ body {
     font-family: var(--font-body);
 }
 
-.hero__text {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto auto;
-}
-
-/* ------------------------------- Botones - Hero ------------------------------- */
 .hero__buttons {
     display: flex;
     gap: 50px;
@@ -214,28 +219,29 @@ body {
     display: flex;
     align-items: center;
     padding: 10px 20px;
-    background-color: #7b4a2af8;
+    background-color: var(--color-cafe);
     border-radius: 10px;
-    color: #F3E9D2;
+    color: var(--color-texto-claro);
     transition: background-color 0.3s ease;
 }
 
 .hero__button--menu:hover {
-    background-color: #7b4a2ad3;
+    background-color: var(--color-dorado);
 }
 
 .hero__button--info {
     display: flex;
     align-items: center;
     padding: 10px 20px;
-    border: 2px solid #7b4a2af8;
+    border: 2px solid var(--color-cafe);
     border-radius: 10px;
-    background-color: #F3E9D2;
+    background-color: var(--color-superficie);
+    color: var(--color-cafe-oscuro);
     transition: background-color 0.3s ease;
 }
 
 .hero__button--info:hover {
-    background-color: rgba(255, 238, 199, 0.808);
+    background-color: var(--color-moka);
 }
 
 .hero__image-container {
@@ -257,15 +263,17 @@ body {
     box-shadow: var(--shadow-lg);
 }
 
-/*-------------------------------- seccion nosotros ----------------------------*/
+
+/* ================================================================
+   NOSOTROS
+================================================================ */
 
 .nosotros {
     margin: 0 auto;
-    padding: 10px;
     background-color: transparent;
     height: auto;
     scroll-margin-top: 75px;
-    max-width: 1140px;
+    max-width: 1100px;
 }
 
 .nosotros__title {
@@ -280,26 +288,24 @@ body {
     margin-bottom: 20px;
 }
 
-/* descripcion------------------- */
-
-.description__content-title {
-    color: rgba(231, 224, 123, 0.767);
-}
-
 .description__content {
     display: flex;
     flex-direction: column;
     flex: 5 1 0;
     margin: 10px;
     padding: 10px 18px;
-    background-color: #7b4a2ab2;
+    background-color: var(--color-cafe-card);
     border-radius: var(--radius-md);
     width: 100%;
 }
 
+.description__content-title {
+    color: var(--color-dorado);
+}
+
 .description__content-text {
     padding-block: var(--space-2);
-    color: #ece7cc;
+    color: var(--color-texto-claro);
 }
 
 .description__image-container {
@@ -317,17 +323,12 @@ body {
     height: 350px;
 }
 
-/* ----------------------------------------------------------------------------------- */
-
-/* --------------------------valores y demas------------------------------------------- */
-
 .creencias {
     margin-top: var(--space-3);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-5);
     align-content: center;
-    /*Añadi esto*/
 }
 
 .creencias__icon-container {
@@ -337,24 +338,24 @@ body {
 .creencias__icon {
     display: flex;
     justify-content: center;
-    color: #7b4a2ab2;
+    color: var(--color-cafe);
     font-size: 40px;
-    background-color: #ece7cc;
+    background-color: var(--color-superficie);
     padding-block: 5px;
     border-radius: 50%;
 }
 
 .title {
-    color: rgba(231, 224, 123, 0.767);
-    border-bottom: 3px solid black;
+    color: var(--color-dorado);
+    border-bottom: 3px solid var(--color-cafe-oscuro);
 }
 
 .grid-item {
     display: flex;
-    background-color: #7b4a2ab2;
+    background-color: var(--color-cafe-card);
     padding: var(--space-4);
     border-radius: var(--radius-md);
-    color: #ece7cc;
+    color: var(--color-texto-claro);
 }
 
 .creencias-text {
@@ -366,16 +367,27 @@ body {
 }
 
 
-
-/* -------------------------menu desayunos ----------------------------- */
+/* ================================================================
+   MENÚ - BASE
+================================================================ */
 
 .menu {
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 50px;
     scroll-margin-top: 75px;
     /* display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; */
+}
+
+.menu__container {
     
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
 }
 
 .menu__title {
@@ -385,11 +397,7 @@ body {
 
 .menu-category {
     padding: 20px 50px;
-    background-color: #7b4a2a81;
-    max-width: 1100px;
-    margin: 0 auto;
 }
-
 
 .menu-category__title {
     margin-top: var(--space-4);
@@ -398,238 +406,373 @@ body {
     font-size: var(--text-3xl);
 }
 
-.menu-card__info {
-    margin-top: var(--space-2);
+.menu-category--desayunos,
+.menu-category--almuerzos, 
+.menu-category--paninis,
+.menu-category--postres, 
+.menu-category--bebidas-calientes,
+.menu-category--bebidas-naturales, 
+.menu-category--refrescos {
+    background-color: var(--color-cafe-section);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 20px;
 }
 
-.menu__container {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */
-}
+
+/* ================================================================
+   MENÚ - CARDS Y OVERLAY
+================================================================ */
 
 .menu-card {
-    background-color: #f3e9d29c;
-    padding: 10px 8px;
+    background-color: var(--color-superficie-card);
+    padding: 10px;
     width: 100%;
-    border-radius: 30px;
-    /* Es para hacer algo con los grids 
-Quiero hacer que esto funcione de esta manera: 
-Que este la imagen, el nombre abajo y la descripcion escondida, 
-pero que cuando pase el mouse por encima de la imagen muestre la 
-descripcion en la parte inferior dentro de la imagen y aparezca 
-como un pequeño sombreado abajo*/
+    border-radius: 15px;
 }
-/* -------------------------------------EL EXPERIMENTO OVERLAY UWU 777 */
+
+.menu-card__info {
+    margin-top: var(--space-2);
+    display: flex;
+    gap: 20px;
+}
+
 .menu-card__photo {
     position: relative;
-    width: 100%;
-    height: auto;
     overflow: hidden;
-    border-radius: 20px 20px 0px 0px;
-    border-bottom: 2px solid #ffffff88;
+    border-bottom: 2px solid var(--color-borde-claro);
+    border-radius: 10px 10px 0px 0px;
 }
-    .menu-card__img {
+
+.menu-card__img {
     width: 100%;
     height: 100%;
     position: absolute;
     object-fit: cover;
-    }
-    
+    object-position: center;
+}
 
-    .menu-card__overlay {
+.menu-card__overlay {
     width: 100%;
-    color: #ffffff;
+    color: var(--color-texto-claro);
     opacity: 0;
     padding: 10px 20px;
     bottom: 0;
-    left: 0px;
     position: absolute;
     transition: background 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    background: #000000;
-            background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
-    }
-
-    .menu-card__photo:hover .menu-card__overlay /* Este es el que hace que se haga oscuro abajo*/ {
-            opacity: 1;
-    }
-
-    .menu-card__ico {
-        position: absolute;
-        top: 8px;
-        color: rgba(231, 224, 123, 0.767);;
-        font-size: 44px;
-    }
-
-
-.menu-category--desayunos {
-    display: grid;
-    grid-template-areas: 
-    "title title title"
-    "omelet omelet tradicional"
-    "omelet omelet americano";
-    gap: var(--space-4);
+    background: var(--overlay-menu);
 }
+
+.menu-card__photo:hover .menu-card__overlay {
+    opacity: 1;
+}
+
+.menu-card__ico {
+    position: absolute;
+    top: 8px;
+    color: var(--color-dorado);
+    font-size: 44px;
+}
+
 .menu-category__title {
     grid-area: title;
 }
+
+
+/* ================================================================
+   MENÚ - DESAYUNOS
+================================================================ */
+
+.menu-category--desayunos {
+    display: grid;
+    justify-items: center;
+    grid-template-areas:
+        "title title title"
+        "omelet omelet tradicional"
+        "omelet omelet desayunoamericano";
+    gap: var(--space-4);
+}
+
 .menu-card--omelet {
     grid-area: omelet;
 }
+
 .menu-card--tradicional {
     grid-area: tradicional;
 }
-.menu-card--americano {
-    grid-area: americano;
+
+.menu-card--desayunoamericano {
+    grid-area: desayunoamericano;
 }
+
 .menu-card__photo--omelet {
-    height: 420px;
+    width: auto;
+    height: 460px;
 }
-.menu-card__photo--tradicional, .menu-card__photo--americano {
+
+.menu-card__photo--tradicional,
+.menu-card__photo--desayunoamericano {
+    width: auto;
     height: 200px;
 }
 
 
+/* ================================================================
+   MENÚ - ALMUERZOS
+================================================================ */
+
 .menu-category--almuerzos {
     display: grid;
     justify-items: center;
-    grid-template-areas: 
-    "title title title"
-    "carne carne pasta"
-    "carne carne ensalada";
+    grid-template-areas:
+        "title title title"
+        "carne carne pasta"
+        "carne carne ensalada";
     gap: var(--space-4);
 }
 
 .menu-card--carne {
     grid-area: carne;
 }
+
 .menu-card--pasta {
     grid-area: pasta;
 }
+
 .menu-card--ensalada {
     grid-area: ensalada;
 }
+
 .menu-card__photo--carne {
-    height: 420px;
-}
-.menu-card__photo--pasta, .menu-card__photo--ensalada {
-    height: 200px; 
+    width: auto;    
+    height: 460px;
 }
 
+.menu-card__photo--pasta,
+.menu-card__photo--ensalada {
+    width: auto;
+    height: 200px;
+}
+
+
+/* ================================================================
+   MENÚ - PANINIS
+================================================================ */
 
 .menu-category--paninis {
     display: grid;
-    grid-template-areas: 
-    "title title title"
-    "tocino tocino jamon"
-    "tocino tocino pizza";
+    justify-items: center;
+    grid-template-areas:
+        "title title title"
+        "tocino tocino jamon"
+        "tocino tocino pizza";
     gap: var(--space-4);
 }
 
 .menu-card--tocino {
     grid-area: tocino;
 }
+
 .menu-card--jamon {
     grid-area: jamon;
 }
+
 .menu-card--pizza {
     grid-area: pizza;
 }
+
 .menu-card__photo--tocino {
-    height: 420px;
+    width: auto;
+    height: 460px;
 }
-.menu-card__photo--pizza, .menu-card__photo--jamon {
+
+.menu-card__photo--pizza,
+.menu-card__photo--jamon {
+    width: auto;
     height: 200px;
 }
 
+
+/* ================================================================
+   MENÚ - POSTRES
+================================================================ */
+
 .menu-category--postres {
     display: grid;
+    justify-items: center;
     grid-template-areas:
-    "title title title"
-    "cheesecake cheesecake tresleches"
-    "cheesecake cheesecake empanadas"
-    "tartaletas tartaletas crepas"
-    "tartaletas tartaletas pie";
+        "title title title"
+        "cheesecake cheesecake tresleches"
+        "cheesecake cheesecake empanadas"
+        "tartaletas tartaletas crepas"
+        "tartaletas tartaletas pie";
     gap: var(--space-4);
 }
+
 .menu-card--cheesecake {
     grid-area: cheesecake;
 }
+
 .menu-card--tartaletas {
     grid-area: tartaletas;
 }
+
 .menu-card--tresleches {
     grid-area: tresleches;
 }
+
 .menu-card--empanadas {
     grid-area: empanadas;
 }
+
 .menu-card--crepas {
     grid-area: crepas;
 }
+
 .menu-card--pie {
     grid-area: pie;
 }
 
-.menu-card__photo--crepas, .menu-card__photo--empanadas, .menu-card__photo--tresleches, .menu-card__photo--pie {
+.menu-card__photo--tartaletas,
+.menu-card__photo--cheesecake {
+    height: 460px;
+}
+
+.menu-card__photo--crepas,
+.menu-card__photo--empanadas,
+.menu-card__photo--tresleches,
+.menu-card__photo--pie {
+    width: auto;
     height: 200px;
 }
-.menu-card__photo--tartaletas, .menu-card__photo--cheesecake {
-    height: 420px;
-}
+
+
+/* ================================================================
+   MENÚ - BEBIDAS CALIENTES
+================================================================ */
 
 .menu-category--bebidas-calientes {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-template-areas:
+        "title title title"
+        "americano cappuccino macchiato"
+        "espresso tederosas tedehierba";
     gap: var(--space-4);
-
 }
+
+.menu-card--americano {
+    grid-area: americano;
+}
+
+.menu-card--cappuccino {
+    grid-area: cappuccino;
+}
+
+.menu-card--macchiato {
+    grid-area: macchiato;
+}
+
+.menu-card--espresso {
+    grid-area: espresso;
+}
+
+.menu-card--tederosas {
+    grid-area: tederosas;
+}
+
+.menu-card--tedehierbabuena {
+    grid-area: tedehierba;
+}
+
+.menu-card__photo--americano,
+.menu-card__photo--cappuccino,
+.menu-card__photo--macchiato,
+.menu-card__photo--espresso,
+.menu-card__photo--tederosas,
+.menu-card__photo--tehierbabuena {
+    width: 303px;
+    height: 250px;
+}
+
+
+/* ================================================================
+   MENÚ - BEBIDAS NATURALES
+================================================================ */
 
 .menu-category--bebidas-naturales {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
     gap: var(--space-4);
     grid-template-areas:
-        "title  title"
-        "item1  item2"
-        "item3  item4"
-    ;
+        "title title"
+        "limonadadefresa limonadahierbabuena"
+        "jugodepepino piñacolada";
 }
 
-.menu-grid-item1 {
-    grid-area: item1;
+.menu-card--limonadafresa {
+    grid-area: limonadadefresa;
 }
 
-.menu-grid-item2 {
-    grid-area: item2;
+.menu-card--limonadahierbabuena {
+    grid-area: limonadahierbabuena;
 }
 
-.menu-grid-item3 {
-    grid-area: item3;
+.menu-card--jugodepepino {
+    grid-area: jugodepepino;
 }
 
-.menu-grid-item4 {
-    grid-area: item4;
+.menu-card--piñacolada {
+    grid-area: piñacolada;
 }
 
-.menu-grid-item5 {
-    grid-area: item5;
+.menu-card__photo--limonadafresa,
+.menu-card__photo--limonadahierbabuena,
+.menu-card__photo--jugopepino,
+.menu-card__photo--piñacolada {
+    width: 475px;
+    height: 400px;
 }
 
 
-
-.menu-category__title {
-    grid-column: 1/4;
-}
-
+/* ================================================================
+   MENÚ - REFRESCOS
+================================================================ */
 
 .menu-category--refrescos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-template-areas:
+        "title title title"
+        "coca pepsi mirinda"
+        "cremasoda te .";
     gap: var(--space-4);
 }
 
+.menu-card--coca {
+    grid-area: coca;
+}
+
+.menu-card--pepsi {
+    grid-area: pepsi;
+}
+
+.menu-card--mirinda {
+    grid-area: mirinda;
+}
+
+.menu-card--cremasoda {
+    grid-area: cremasoda;
+}
+
+.menu-card--te {
+    grid-area: te;
+}
+
+
+/* ================================================================
+   RESPONSIVE
+================================================================ */
 
 @media (max-width: 768px) {
 
@@ -642,21 +785,8 @@ como un pequeño sombreado abajo*/
         align-items: center;
     }
 
-
     .header__nav {
         width: 100%;
-
-    }
-
-
-    .nav__list-link {
-        padding: 10px 15px;
-        width: 150px;
-        text-align: center;
-    }
-
-    .menu-category__title {
-        grid-column: 1
     }
 
     .nav__list {
@@ -665,6 +795,34 @@ como un pequeño sombreado abajo*/
         flex-wrap: wrap;
         gap: 10px;
         padding: 10px;
+    }
+
+    .nav__list-link {
+        padding: 10px 15px;
+        width: 150px;
+        text-align: center;
+    }
+
+    .hero__image-container,
+    .hero__content {
+        display: flex;
+    }
+
+    .hero__image-container {
+        display: flex;
+    }
+
+    .nosotros__description {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .description__img {
+        margin-top: var(--space-4);
+    }
+
+    .menu-category__title {
+        grid-column: 1;
     }
 
     .menu-category--desayunos,
@@ -680,7 +838,7 @@ como un pequeño sombreado abajo*/
 
     .menu-category--desayunos {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, auto)
+        grid-template-rows: repeat(3, auto);
     }
 
     .menu-category--bebidas-naturales {
@@ -689,40 +847,14 @@ como un pequeño sombreado abajo*/
             "item1"
             "item2"
             "item3"
-            "item4"
+            "item4";
     }
 
     .menu__title {
         margin-top: 325px;
-        /* intento de arreglo momentaneo pero no sirve bien cuando se hace mas pequenia la pantalla */
     }
 
-    .nosotros__description {
-        display: flex;
-        flex-direction: column;
-
+    .menu-card__overlay {
+        opacity: 1;
     }
-
-    .description__img {
-        margin-top: var(--space-4);
-
-    }
-
-
-    .hero__image-container,
-    .hero__content {
-        display: flex;
-
-    }
-
-    .hero__image-container {
-        display: flex;
-
-    }
-
-    .menu-card__overlay{
-        opacity:1
-    }
-
-    /* order: -1;pa cambiar orde en la posicion del elemento no sabia XD */
 }
