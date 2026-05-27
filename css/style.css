@@ -943,15 +943,13 @@ body {
 }
 
 .footer__social-link {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background-color: var(--color-cafe);
     display: flex;
-    align-items: center;
     justify-content: center;
     color: var(--color-texto-claro);
-    font-size: var(--text-lg);
+    font-size: 40px;
+    background-color: var(--color-cafe);
+    padding-block: 5px;
+    border-radius: 50%;
     transition: var(--transition-base);
 }
 
