@@ -597,8 +597,8 @@ body {
         "title title title"
         "cheesecake cheesecake tresleches"
         "cheesecake cheesecake empanadas"
-        "tartaletas tartaletas crepas"
-        "tartaletas tartaletas pie";
+        "crepas tartaletas tartaletas"
+        "pie tartaletas tartaletas";
     gap: var(--space-4);
 }
 
@@ -723,7 +723,7 @@ body {
 .menu-card__photo--limonadahierbabuena,
 .menu-card__photo--jugopepino,
 .menu-card__photo--piñacolada {
-    width: 475px;
+    width: 100%;
     height: 400px;
 }
 
@@ -744,30 +744,32 @@ body {
 
 .menu-card--coca {
     grid-area: coca;
-    width: 325px;
+    width: 100%;
+    min-width: 200px;
 }
 
 .menu-card--pepsi {
     grid-area: pepsi;
-    width: 325px;
+    width: 100%;
 }
 
 .menu-card--mirinda {
     grid-area: mirinda;
-    width: 325px;
+    width: 100%;
 }
 
 .menu-card--cremasoda {
     grid-area: cremasoda;
-    width: 325px;}
+    width: 100%;
+}
 
 .menu-card--te {
     grid-area: te;
-    width: 325px;
+    width: 100%;
 }
 .menu-card--horchata {
     grid-area: horchata;
-    width: 325px;
+    width: 100%;
 }
 
 
@@ -1128,6 +1130,16 @@ body {
             "mirinda cremasoda"
             "te horchata"
             ;
+    }
+
+    .contacts__container{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    }
+
+    .contacts__form{
+        width: 100%;
     }
 
     .menu-card__overlay {
