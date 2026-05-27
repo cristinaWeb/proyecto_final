@@ -597,8 +597,8 @@ body {
         "title title title"
         "cheesecake cheesecake tresleches"
         "cheesecake cheesecake empanadas"
-        "tartaletas tartaletas crepas"
-        "tartaletas tartaletas pie";
+        "crepas tartaletas tartaletas"
+        "pie tartaletas tartaletas";
     gap: var(--space-4);
 }
 
@@ -723,7 +723,7 @@ body {
 .menu-card__photo--limonadahierbabuena,
 .menu-card__photo--jugopepino,
 .menu-card__photo--piñacolada {
-    width: 475px;
+    width: 100%;
     height: 400px;
 }
 
@@ -744,30 +744,32 @@ body {
 
 .menu-card--coca {
     grid-area: coca;
-    width: 325px;
+    width: 100%;
+    min-width: 200px;
 }
 
 .menu-card--pepsi {
     grid-area: pepsi;
-    width: 325px;
+    width: 100%;
 }
 
 .menu-card--mirinda {
     grid-area: mirinda;
-    width: 325px;
+    width: 100%;
 }
 
 .menu-card--cremasoda {
     grid-area: cremasoda;
-    width: 325px;}
+    width: 100%;
+}
 
 .menu-card--te {
     grid-area: te;
-    width: 325px;
+    width: 100%;
 }
 .menu-card--horchata {
     grid-area: horchata;
-    width: 325px;
+    width: 100%;
 }
 
 
@@ -1010,46 +1012,135 @@ body {
         display: flex;
     }
 
+    .nosotros {
+    margin: 0 10px;
+    }
+
     .nosotros__description {
         display: flex;
         flex-direction: column;
+    }
+
+    .description__content{
+    margin: 0;
     }
 
     .description__img {
         margin-top: var(--space-4);
     }
 
-    .menu-category__title {
-        grid-column: 1;
-    }
-
-    .menu-category--desayunos,
-    .menu-category--paninis,
-    .menu-category--postres,
-    .menu-category--bebidas-calientes,
-    .menu-category--bebidas-naturales,
-    .menu-category--refrescos,
-    .creencias,
-    .menu-category--almuerzos {
+    .creencias{
         grid-template-columns: 1fr;
     }
 
     .menu-category--desayunos {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+            "title"
+            "omelet"
+            "tradicional"
+            "desayunoamericano";
     }
+
+    .menu-card__photo--tradicional,
+    .menu-card__photo--desayunoamericano {
+    width: auto;
+    height: 300px;
+    }
+
+    .menu-category--almuerzos {
+        grid-template-areas:
+            "title"
+            "carne"
+            "pasta"
+            "ensalada";
+    }
+
+    .menu-card__photo--pasta,
+    .menu-card__photo--ensalada {
+    width: auto;
+    height: 300px;
+    }
+
+    .menu-category--paninis {
+        grid-template-areas:
+            "title"
+            "tocino"
+            "jamon"
+            "pizza";
+    }
+
+    .menu-card__photo--pizza,
+    .menu-card__photo--jamon {
+    width: auto;
+    height: 300px;
+}
+
+    .menu-category--postres {
+        grid-template-areas:
+            "title"
+            "cheesecake"
+            "empanadas"
+            "tresleches"
+            "tartaletas"
+            "crepas"
+            "pie";
+    }
+
+    .menu-card__photo--crepas,
+    .menu-card__photo--empanadas,
+    .menu-card__photo--tresleches,
+    .menu-card__photo--pie {
+    width: auto;
+    height: 300px;
+}
+
+    .menu-category--bebidas-calientes {
+        grid-template-areas:
+            "title"
+            "americano"
+            "cappuccino"
+            "macchiato"
+            "espresso"
+            "tederosas"
+            "tedehierba";
+    }
+
+    .menu-card__photo--americano,
+    .menu-card__photo--cappuccino,
+    .menu-card__photo--macchiato,  
+    .menu-card__photo--espresso,
+    .menu-card__photo--tederosas,
+    .menu-card__photo--tehierbabuena {
+    width: auto;
+    height: 300px;
+}
 
     .menu-category--bebidas-naturales {
         grid-template-areas:
             "title"
-            "item1"
-            "item2"
-            "item3"
-            "item4";
+            "limonadadefresa"
+            "limonadahierbabuena"
+            "jugodepepino"
+            "piñacolada";
+
     }
 
-    .menu__title {
-        margin-top: 325px;
+    .menu-category--refrescos {
+        grid-template-areas:
+            "title title"
+            "coca pepsi"
+            "mirinda cremasoda"
+            "te horchata"
+            ;
+    }
+
+    .contacts__container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacts__form{
+        width: 100%;
     }
 
     .menu-card__overlay {
