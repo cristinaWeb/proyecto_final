@@ -745,7 +745,7 @@ body {
     grid-template-areas:
         "title title title"
         "coca pepsi mirinda"
-        "cremasoda te .";
+        "cremasoda te horchata";
     gap: var(--space-4);
 }
 
@@ -770,6 +770,10 @@ body {
 
 .menu-card--te {
     grid-area: te;
+    width: 325px;
+}
+.menu-card--horchata {
+    grid-area: horchata;
     width: 325px;
 }
 
