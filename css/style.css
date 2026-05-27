@@ -69,6 +69,7 @@
     --shadow-sm: 0 1px 3px rgba(43, 26, 18, 0.08);
     --shadow-md: 0 4px 16px rgba(43, 26, 18, 0.10);
     --shadow-lg: 0 8px 32px rgba(43, 26, 18, 0.14);
+    --shadow-focus: 0 0 0 3px rgba(201, 147, 91, 0.2);
 
     /* Ancho máximo del contenedor */
     --container-max: 1100px;
@@ -382,14 +383,6 @@ body {
     justify-content: center; */
 }
 
-.menu__container {
-/*     
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */ */
-}
-
 .menu__title {
     font-family: var(--font-display);
     font-size: 48px;
@@ -604,8 +597,8 @@ body {
         "title title title"
         "cheesecake cheesecake tresleches"
         "cheesecake cheesecake empanadas"
-        "crepas tartaletas tartaletas"
-        "pie tartaletas tartaletas";
+        "tartaletas tartaletas crepas"
+        "tartaletas tartaletas pie";
     gap: var(--space-4);
 }
 
@@ -691,7 +684,7 @@ body {
 .menu-card__photo--espresso,
 .menu-card__photo--tederosas,
 .menu-card__photo--tehierbabuena {
-    width: auto;
+    width: 303px;
     height: 250px;
 }
 
@@ -730,7 +723,7 @@ body {
 .menu-card__photo--limonadahierbabuena,
 .menu-card__photo--jugopepino,
 .menu-card__photo--piñacolada {
-    width: auto;
+    width: 475px;
     height: 400px;
 }
 
@@ -751,33 +744,229 @@ body {
 
 .menu-card--coca {
     grid-area: coca;
-    width: 100%;
+    width: 325px;
 }
 
 .menu-card--pepsi {
     grid-area: pepsi;
-    width: 100%;
+    width: 325px;
 }
 
 .menu-card--mirinda {
     grid-area: mirinda;
-    width: 100%;
+    width: 325px;
 }
 
 .menu-card--cremasoda {
     grid-area: cremasoda;
-    width: 100%;
-}
+    width: 325px;}
 
 .menu-card--te {
     grid-area: te;
-    width: 100%;
+    width: 325px;
 }
 .menu-card--horchata {
     grid-area: horchata;
-    width: 100%;
+    width: 325px;
 }
 
+
+/* ================================================================
+   SECCIÓN DE CONTACTOS Y FORMULARIO
+================================================================ */
+
+.contacts {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: var(--space-20) 0;
+    scroll-margin-top: 75px;
+}
+
+.contacts__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: start;
+}
+
+.contacts__tag {
+    color: var(--color-dorado);
+    font-weight: bold;
+    margin-bottom: var(--space-3);
+    letter-spacing: var(--space-1);
+    text-transform: uppercase;
+}
+
+.contacts__title {
+    font-size: var(--text-5xl);
+    font-family: var(--font-display);
+    margin-bottom: var(--space-5);
+    color: var(--color-cafe-oscuro);
+}
+
+.contacts__text {
+    margin-bottom: var(--space-8);
+    line-height: 1.7;
+    color: var(--color-texto);
+    font-family: var(--font-body);
+}
+
+.contacts__details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.contacts__item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+}
+
+.contacts__icon {
+    font-size: var(--text-xl);
+    color: var(--color-dorado);
+    margin-top: var(--space-1);
+}
+
+.contacts__subtitle {
+    color: var(--color-cafe);
+    margin-bottom: var(--space-1);
+    font-size: var(--text-lg);
+}
+
+.contacts__detail {
+    color: var(--color-texto);
+    font-size: var(--text-base);
+}
+
+/* ================================================================
+   FORMULARIO
+================================================================ */
+
+.contacts__form {
+    background-color: var(--color-superficie);
+    padding: var(--space-8);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+}
+
+.contacts__group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.contacts__label {
+    font-weight: 600;
+    color: var(--color-cafe);
+    font-size: var(--text-base);
+}
+
+.contacts__input {
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--color-moka);
+    border-radius: var(--radius-md);
+    background-color: var(--color-fondo);
+    font-size: var(--text-base);
+    color: var(--color-texto);
+    transition: var(--transition-base);
+    font-family: var(--font-body);
+}
+
+.contacts__input:focus {
+    outline: none;
+    border-color: var(--color-dorado);
+    box-shadow: var(--shadow-focus);
+}
+
+.contacts__textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contacts__button {
+    background-color: var(--color-cafe);
+    color: var(--color-texto-claro);
+    border: none;
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+    font-size: var(--text-base);
+    font-family: var(--font-body);
+    cursor: pointer;
+    transition: var(--transition-base);
+}
+
+.contacts__button:hover {
+    background-color: var(--color-dorado);
+    transform: translateY(-2px);
+}
+
+/* ================================================================
+   FOOTER
+================================================================ */
+
+.footer {
+    background-color: var(--color-cafe-oscuro);
+    margin-top: var(--space-20);
+    color: var(--color-texto-claro);
+}
+
+.footer__container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: var(--space-10);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-8);
+    flex-wrap: wrap;
+}
+
+.footer__title {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-2);
+}
+
+.footer__text {
+    color: rgba(255, 250, 243, 0.75);
+    font-size: var(--text-base);
+}
+
+.footer__social {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.footer__social-link {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--color-cafe);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-texto-claro);
+    font-size: var(--text-lg);
+    transition: var(--transition-base);
+}
+
+.footer__social-link:hover {
+    background-color: var(--color-dorado);
+    transform: translateY(-3px);
+}
+
+.footer__bottom {
+    text-align: center;
+    padding: var(--space-5);
+    border-top: 1px solid rgba(255, 250, 243, 0.1);
+    font-size: var(--text-sm);
+    color: rgba(255, 250, 243, 0.7);
+}
 
 /* ================================================================
    RESPONSIVE
@@ -821,126 +1010,46 @@ body {
         display: flex;
     }
 
-    .nosotros {
-    margin: 0 10px;
-    }
-
     .nosotros__description {
         display: flex;
         flex-direction: column;
-    }
-
-    .description__content{
-    margin: 0;
     }
 
     .description__img {
         margin-top: var(--space-4);
     }
 
-    .creencias{
+    .menu-category__title {
+        grid-column: 1;
+    }
+
+    .menu-category--desayunos,
+    .menu-category--paninis,
+    .menu-category--postres,
+    .menu-category--bebidas-calientes,
+    .menu-category--bebidas-naturales,
+    .menu-category--refrescos,
+    .creencias,
+    .menu-category--almuerzos {
         grid-template-columns: 1fr;
     }
 
     .menu-category--desayunos {
-        grid-template-areas:
-            "title"
-            "omelet"
-            "tradicional"
-            "desayunoamericano";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
     }
-
-    .menu-card__photo--tradicional,
-    .menu-card__photo--desayunoamericano {
-    width: auto;
-    height: 300px;
-}
-
-
-    .menu-category--almuerzos {
-        grid-template-areas:
-            "title"
-            "carne"
-            "pasta"
-            "ensalada";
-    }
-
-    .menu-card__photo--pasta,
-    .menu-card__photo--ensalada {
-    width: auto;
-    height: 300px;
-    }
-
-    .menu-category--paninis {
-        grid-template-areas:
-            "title"
-            "tocino"
-            "jamon"
-            "pizza";
-    }
-
-    .menu-card__photo--pizza,
-    .menu-card__photo--jamon {
-    width: auto;
-    height: 300px;
-}
-
-    .menu-category--postres {
-        grid-template-areas:
-            "title"
-            "cheesecake"
-            "empanadas"
-            "tresleches"
-            "tartaletas"
-            "crepas"
-            "pie";
-    }
-
-    .menu-card__photo--crepas,
-    .menu-card__photo--empanadas,
-    .menu-card__photo--tresleches,
-    .menu-card__photo--pie {
-    width: auto;
-    height: 300px;
-}
-
-    .menu-category--bebidas-calientes {
-        grid-template-areas:
-            "title"
-            "americano"
-            "cappuccino"
-            "macchiato"
-            "espresso"
-            "tederosas"
-            "tedehierba";
-    }
-
-    .menu-card__photo--americano,
-    .menu-card__photo--cappuccino,
-    .menu-card__photo--macchiato,  
-    .menu-card__photo--espresso,
-    .menu-card__photo--tederosas,
-    .menu-card__photo--tehierbabuena {
-    width: auto;
-    height: 300px;
-}
 
     .menu-category--bebidas-naturales {
         grid-template-areas:
             "title"
-            "limonadadefresa"
-            "limonadahierbabuena"
-            "jugodepepino"
-            "piñacolada";
+            "item1"
+            "item2"
+            "item3"
+            "item4";
     }
 
-    .menu-category--refrescos {
-        grid-template-areas:
-            "title title"
-            "coca pepsi"
-            "mirinda cremasoda"
-            "te horchata"
-            ;
+    .menu__title {
+        margin-top: 325px;
     }
 
     .menu-card__overlay {
