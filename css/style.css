@@ -507,7 +507,7 @@ body {
 
 .menu-card__photo--omelet {
     width: auto;
-    height: 400px;
+    height: 460px;
 }
 
 .menu-card__photo--tradicional,
@@ -942,7 +942,7 @@ body {
             "te horchata"
             ;
     }
-    
+
     .menu-card__overlay {
         opacity: 1;
     }
