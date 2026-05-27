@@ -1045,7 +1045,8 @@ body {
     .menu-card__photo--desayunoamericano {
     width: auto;
     height: 300px;
-    }
+}
+
 
     .menu-category--almuerzos {
         grid-template-areas:
@@ -1122,7 +1123,6 @@ body {
             "limonadahierbabuena"
             "jugodepepino"
             "piñacolada";
-
     }
 
     .menu-category--refrescos {
@@ -1135,8 +1135,9 @@ body {
     }
 
     .contacts__container{
-        display: flex;
-        flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
     }
 
     .contacts__form{
