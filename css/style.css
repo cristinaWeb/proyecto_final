@@ -751,22 +751,26 @@ body {
 
 .menu-card--coca {
     grid-area: coca;
+    width: 325px;
 }
 
 .menu-card--pepsi {
     grid-area: pepsi;
+    width: 325px;
 }
 
 .menu-card--mirinda {
     grid-area: mirinda;
+    width: 325px;
 }
 
 .menu-card--cremasoda {
     grid-area: cremasoda;
-}
+    width: 325px;}
 
 .menu-card--te {
     grid-area: te;
+    width: 325px;
 }
 
 
