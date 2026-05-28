@@ -505,7 +505,6 @@ body {
 
 .menu-card__photo--tradicional,
 .menu-card__photo--desayunoamericano {
-    max-width: 325px;
     width: auto;
     height: 200px;
 }
