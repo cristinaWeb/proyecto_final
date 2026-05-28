@@ -685,7 +685,6 @@ body {
 .menu-card__photo--espresso,
 .menu-card__photo--tederosas,
 .menu-card__photo--tehierbabuena {
-    max-width: 325px;
     width: 100%;
     height: 250px;
 }
