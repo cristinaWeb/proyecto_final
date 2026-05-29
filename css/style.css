@@ -297,7 +297,7 @@ body {
 
 .description__container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex: 5 1 0;
     align-items: center;
     justify-content: center;
@@ -306,20 +306,36 @@ body {
 
 .description__content {
     width: 90%;
-    height: 90%;
+    height: 100%;
     padding: 10px 18px;
-    background-color: var(--color-cafe-card);
     border-radius: var(--radius-md);
-    font-size: var(--text-sm);
+    line-height: 1.5;
+}
+
+.nosotros__icon-container {
+    margin-right: 10px;
+    margin-top: 15px;
+    align-self: flex-start;
+}
+
+.nosotros__icon {
+    color: var(--color-dorado);
+    font-size: 40px;
+    background-color: var(--color-cafe);
+    padding-block: 5px;
+    border-radius: 50%;
 }
 
 .description__content-title {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
     color: var(--color-dorado);
 }
 
 .description__content-text {
     padding-block: var(--space-2);
-    color: var(--color-texto-claro);
+    color: var(--color-texto);
+    font-size: var(--text-base);
 }
 
 .description__image-container {
@@ -344,7 +360,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-5);
     align-content: center;
-    margin-bottom: 75px;
+    margin: 0px 30px 75px 30px;
 }
 
 .creencias__icon-container {
@@ -366,6 +382,7 @@ body {
 .title {
     color: var(--color-dorado);
     border-bottom: 3px solid var(--color-dorado);
+    align-self: flex-start;
 }
 
 .grid-item {
@@ -376,11 +393,14 @@ body {
     border-radius: var(--radius-md);
     color: var(--color-cafe-oscuro);
     box-shadow: var(--shadow-md);
-    align-items: center;
+    align-items: start;
 }
+
+
 
 .creencias-text {
     margin-top: var(--space-3);
+    font-size: var(--text-sm);
 }
 
 .valores__list {
@@ -404,6 +424,7 @@ body {
 }
 
 .menu__title {
+    text-align: center;
     font-family: var(--font-display);
     font-size: 48px;
 }
@@ -461,6 +482,11 @@ body {
     overflow: hidden;
     border-bottom: 2px solid var(--color-borde-claro);
     border-radius: 10px 10px 0px 0px;
+    transition: transform 0.3s ease;
+}
+
+.menu-card__photo:hover {
+    transform: scale(0.99);
 }
 
 .menu-card__img {
