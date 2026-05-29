@@ -474,7 +474,17 @@ body {
 .menu-card__info {
     margin-top: var(--space-2);
     display: flex;
-    gap: 20px;
+    gap: 10px;
+}
+
+.menu-card__title, .menu-card__separator {
+    font-family: "Quicksand", Arial, sans-serif;
+    font-weight: 700;
+}
+
+.menu-card__price {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
 }
 
 .menu-card__photo {
