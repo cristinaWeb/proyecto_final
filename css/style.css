@@ -12,6 +12,7 @@
     --color-moka: #D8B89A;
 
     --color-dorado: #C9935B;
+    --color-dorado-claro: #ecc672;
     --color-verde: #7E8F74;
 
     --color-texto: #2B1A12;
@@ -107,6 +108,12 @@ body {
     color: var(--color-texto);
 }
 
+.hr__separator {
+    margin: 0 auto;
+    border: solid 1px var(--color-dorado);
+    width: 60%;
+}
+
 
 /* ================================================================
    HEADER Y NAVEGACIÓN
@@ -160,7 +167,7 @@ body {
     transition: 0.3s ease;
     background-color: var(--color-cafe);
     font-weight: 700;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .nav__list-link:hover {
@@ -273,27 +280,26 @@ body {
     margin: 0 auto;
     background-color: transparent;
     height: auto;
-    scroll-margin-top: 75px;
+    scroll-margin-top: 95px;
     max-width: 1100px;
 }
 
 .nosotros__title {
     text-align: center;
-    padding-block: 30px;
+    margin-top: 75px;
     font-family: var(--font-display);
     font-size: 48px;
 }
 
 .nosotros__description {
     display: flex;
-    margin-bottom: 20px;
 }
 
 .description__content {
     display: flex;
     flex-direction: column;
     flex: 5 1 0;
-    margin: 10px;
+    margin: 30px 15px 30px 15px;
     padding: 10px 18px;
     background-color: var(--color-cafe-card);
     border-radius: var(--radius-md);
@@ -313,7 +319,7 @@ body {
     display: flex;
     flex-direction: column;
     flex: 5 1 0;
-    margin: 10px;
+    margin: 30px 15px 30px 15px;
 }
 
 .description__img {
@@ -330,33 +336,41 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-5);
     align-content: center;
+    margin-bottom: 75px;
 }
 
 .creencias__icon-container {
     margin-right: 10px;
+    margin-top: 10px;
+    align-self: flex-start;
 }
 
 .creencias__icon {
     display: flex;
     justify-content: center;
-    color: var(--color-cafe);
+    color: var(--color-dorado);
     font-size: 40px;
-    background-color: var(--color-superficie);
+    background-color: var(--color-cafe);
     padding-block: 5px;
     border-radius: 50%;
+
+    
 }
 
 .title {
     color: var(--color-dorado);
-    border-bottom: 3px solid var(--color-cafe-oscuro);
+    border-bottom: 3px solid var(--color-dorado);
 }
 
 .grid-item {
     display: flex;
-    background-color: var(--color-cafe-card);
+    line-height: 1.5;
+    background-color: var(--color-superficie-card);
     padding: var(--space-4);
     border-radius: var(--radius-md);
-    color: var(--color-texto-claro);
+    color: var(--color-cafe-oscuro);
+    box-shadow: var(--shadow-md);
+    align-items: center;
 }
 
 .creencias-text {
@@ -376,7 +390,7 @@ body {
     max-width: 1100px;
     margin: 0 auto;
     margin-top: 50px;
-    scroll-margin-top: 75px;
+    scroll-margin-top: 95px;
     /* display: flex;
     flex-direction: column;
     align-items: center;
@@ -389,7 +403,7 @@ body {
 }
 
 .menu-category {
-    padding: 20px 50px;
+    padding: 10px 100px 60px 100px;
 }
 
 .menu-category__title {
@@ -412,6 +426,10 @@ body {
     border-radius: 20px;
 }
 
+.menu-category--refrescos {
+    margin-bottom: 75px;
+}
+
 
 /* ================================================================
    MENÚ - CARDS Y OVERLAY
@@ -419,8 +437,10 @@ body {
 
 .menu-card {
     background-color: var(--color-superficie-card);
-    padding: 10px;
+    padding: 8px;
     width: 100%;
+    height: auto;
+    box-shadow: var(--shadow-md);
     border-radius: 15px;
 }
 
@@ -463,12 +483,14 @@ body {
 .menu-card__ico {
     position: absolute;
     top: 8px;
-    color: var(--color-dorado);
+    color: var(--color-dorado-claro);
     font-size: 44px;
 }
 
 .menu-category__title {
     grid-area: title;
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
 }
 
 
@@ -519,8 +541,8 @@ body {
     justify-items: center;
     grid-template-areas:
         "title title title"
-        "carne carne pasta"
-        "carne carne ensalada";
+        "pasta carne carne"
+        "ensalada carne carne";
     gap: var(--space-4);
 }
 
@@ -781,7 +803,7 @@ body {
     max-width: var(--container-max);
     margin: 0 auto;
     padding: var(--space-20) 0;
-    scroll-margin-top: 75px;
+    scroll-margin-top: 45px;
 }
 
 .contacts__container {
