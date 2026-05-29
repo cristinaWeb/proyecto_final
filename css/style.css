@@ -65,6 +65,7 @@
     --radius-md: 8px;
     --radius-lg: 16px;
     --radius-full: 9999px;
+    --radius-circle: 50%;
 
     /* Sombras */
     --shadow-sm: 0 1px 3px rgba(43, 26, 18, 0.08);
@@ -76,9 +77,113 @@
     --container-max: 1100px;
     --container-padding: var(--space-6);
 
+    /* Medidas generales del proyecto */
+    --size-full: 100%;
+    --size-auto: auto;
+    --size-half: 50%;
+    --size-description-content: 90%;
+    --size-description-img-width: 80%;
+    --size-description-img-height: 90%;
+    --size-hero-img-width: 85%;
+    --size-separator-width: 60%;
+
+    /* Header y navegación */
+    --z-header: 1000;
+    --logo-size: 70px;
+    --nav-font-size: 20px;
+    --nav-padding: 25px 40px;
+    --nav-padding-mobile: 10px 15px;
+    --nav-link-mobile-width: 150px;
+    --nav-mobile-gap: var(--space-10px);
+    --nav-mobile-padding: var(--space-mobile-padding);
+
+    /* Tamaños de secciones */
+    --section-title-size: 48px;
+    --hero-height: 89vh;
+    --hero-scroll-margin: 80px;
+    --section-scroll-margin: 95px;
+    --contacts-scroll-margin: 45px;
+    --breakpoint-mobile: 768px;
+    --hero-container-flex: 6 1 0;
+    --hero-image-flex: 4 1 0;
+    --section-column-flex: 5 1 0;
+
+    /* Espaciados específicos */
+    --space-5px: 5px;
+    --space-8px: 8px;
+    --space-10px: 10px;
+    --space-15px: 15px;
+    --space-18px: 18px;
+    --space-20px: 20px;
+    --space-25px: 25px;
+    --space-30px: 30px;
+    --space-40px: 40px;
+    --space-50px: 50px;
+    --space-60px: 60px;
+    --space-75px: 75px;
+    --space-100px: 100px;
+    --space-150px: 150px;
+    --space-description-margin: 30px 15px 30px 15px;
+    --space-creencias-margin: 0px 30px 75px 30px;
+    --space-menu-category-padding: 10px 100px 60px 100px;
+    --space-button-padding: 10px 20px;
+    --space-overlay-padding: var(--space-button-padding);
+    --space-mobile-padding: 10px;
+
+    /* Bordes específicos */
+    --radius-button: 10px;
+    --radius-card: 15px;
+    --radius-section: 20px;
+    --radius-hero-img: 30px;
+    --radius-photo-top: 10px 10px 0px 0px;
+    --border-separator: solid 1px var(--color-dorado);
+    --border-button: 2px solid var(--color-cafe);
+    --border-photo: 2px solid var(--color-borde-claro);
+    --border-title: 3px solid var(--color-dorado);
+    --border-input: 1px solid var(--color-moka);
+    --border-footer: 1px solid rgba(255, 250, 243, 0.1);
+
+    /* Alturas de imágenes */
+    --height-menu-featured: 460px;
+    --height-menu-small: 200px;
+    --height-menu-medium: 250px;
+    --height-menu-natural: 400px;
+    --height-menu-mobile: 300px;
+    --height-textarea: 150px;
+
+    /* Tipografías específicas */
+    --font-system: Arial, Helvetica, sans-serif;
+    --font-menu-title: "Quicksand", Arial, sans-serif;
+    --font-menu-price: "Cormorant Garamond", Georgia, serif;
+
+    /* Pesos */
+    --weight-bold: 700;
+    --weight-semibold: 600;
+
+    /* Line height */
+    --line-height-normal: 1.5;
+    --line-height-loose: 1.7;
+
+    /* Iconos y efectos */
+    --icon-size: 40px;
+    --menu-icon-size: 44px;
+    --icon-top: 8px;
+    --hover-scale-card: scale(0.99);
+    --hover-lift-button: translateY(-2px);
+    --hover-lift-social: translateY(-3px);
+    --opacity-hidden: 0;
+    --opacity-visible: 1;
+
+    /* Colores con transparencia específicos */
+    --color-footer-text: rgba(255, 250, 243, 0.75);
+    --color-footer-bottom: rgba(255, 250, 243, 0.7);
+    --color-footer-border: rgba(255, 250, 243, 0.1);
+
     /* Transiciones */
     --transition-fast: 0.15s ease;
     --transition-base: 0.25s ease;
+    --transition-hover: 0.3s ease;
+    --transition-overlay: 0.5s ease-in-out;
 }
 
 
@@ -102,7 +207,7 @@ a {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-system);
     margin: 0 auto;
     background-color: var(--color-fondo);
     color: var(--color-texto);
@@ -110,8 +215,8 @@ body {
 
 .hr__separator {
     margin: 0 auto;
-    border: solid 1px var(--color-dorado);
-    width: 60%;
+    border: var(--border-separator);
+    width: var(--size-separator-width);
 }
 
 
@@ -125,7 +230,7 @@ body {
     justify-content: space-between;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: var(--z-header);
 }
 
 .header__container {
@@ -140,9 +245,9 @@ body {
 }
 
 .header__logo-img {
-    width: 70px;
+    width: var(--logo-size);
     justify-content: center;
-    padding: 8px;
+    padding: var(--space-8px);
 }
 
 .header__description {
@@ -163,11 +268,11 @@ body {
 
 .nav__list-link {
     color: var(--color-texto-claro);
-    padding: 25px 40px;
-    transition: 0.3s ease;
+    padding: var(--nav-padding);
+    transition: var(--transition-hover);
     background-color: var(--color-cafe);
-    font-weight: 700;
-    font-size: 20px;
+    font-weight: var(--weight-bold);
+    font-size: var(--nav-font-size);
 }
 
 .nav__list-link:hover {
@@ -181,25 +286,25 @@ body {
 
 .hero {
     margin: 0 auto;
-    max-width: 1100px;
-    scroll-margin-top: 80px;
+    max-width: var(--container-max);
+    scroll-margin-top: var(--hero-scroll-margin);
 }
 
 .hero__content {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 89vh;
+    height: var(--hero-height);
 }
 
 .hero__container {
     display: flex;
     flex-direction: column;
-    flex: 6 1 0;
+    flex: var(--hero-container-flex);
 }
 
 .hero__text {
-    width: 50%;
+    width: var(--size-half);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -207,30 +312,30 @@ body {
 }
 
 .hero__title {
-    font-size: 48px;
+    font-size: var(--section-title-size);
     font-family: var(--font-display);
 }
 
 .hero__description {
-    margin-top: 10px;
-    font-size: 16px;
-    margin-bottom: 10px;
+    margin-top: var(--space-10px);
+    font-size: var(--text-base);
+    margin-bottom: var(--space-10px);
     font-family: var(--font-body);
 }
 
 .hero__buttons {
     display: flex;
-    gap: 50px;
+    gap: var(--space-50px);
 }
 
 .hero__button--menu {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: var(--space-button-padding);
     background-color: var(--color-cafe);
-    border-radius: 10px;
+    border-radius: var(--radius-button);
     color: var(--color-texto-claro);
-    transition: background-color 0.3s ease;
+    transition: background-color var(--transition-hover);
 }
 
 .hero__button--menu:hover {
@@ -240,12 +345,12 @@ body {
 .hero__button--info {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
-    border: 2px solid var(--color-cafe);
-    border-radius: 10px;
+    padding: var(--space-button-padding);
+    border: var(--border-button);
+    border-radius: var(--radius-button);
     background-color: var(--color-superficie);
     color: var(--color-cafe-oscuro);
-    transition: background-color 0.3s ease;
+    transition: background-color var(--transition-hover);
 }
 
 .hero__button--info:hover {
@@ -254,8 +359,8 @@ body {
 
 .hero__image-container {
     display: flex;
-    height: 100%;
-    flex: 4 1 0;
+    height: var(--size-full);
+    flex: var(--hero-image-flex);
 }
 
 .hero__image-containerimg {
@@ -265,9 +370,9 @@ body {
 }
 
 .hero__image {
-    width: 85%;
+    width: var(--size-hero-img-width);
     height: auto;
-    border-radius: 30px;
+    border-radius: var(--radius-hero-img);
     box-shadow: var(--shadow-lg);
 }
 
@@ -280,15 +385,15 @@ body {
     margin: 0 auto;
     background-color: transparent;
     height: auto;
-    scroll-margin-top: 95px;
-    max-width: 1100px;
+    scroll-margin-top: var(--section-scroll-margin);
+    max-width: var(--container-max);
 }
 
 .nosotros__title {
     text-align: center;
-    margin-top: 75px;
+    margin-top: var(--space-75px);
     font-family: var(--font-display);
-    font-size: 48px;
+    font-size: var(--section-title-size);
 }
 
 .nosotros__description {
@@ -298,32 +403,32 @@ body {
 .description__container {
     display: flex;
     flex-direction: row;
-    flex: 5 1 0;
+    flex: var(--section-column-flex);
     align-items: center;
     justify-content: center;
-    margin: 30px 15px 30px 15px;
+    margin: var(--space-description-margin);
 }
 
 .description__content {
-    width: 90%;
-    height: 100%;
-    padding: 10px 18px;
+    width: var(--size-description-content);
+    height: var(--size-full);
+    padding: var(--space-10px) var(--space-18px);
     border-radius: var(--radius-md);
-    line-height: 1.5;
+    line-height: var(--line-height-normal);
 }
 
 .nosotros__icon-container {
-    margin-right: 10px;
-    margin-top: 15px;
+    margin-right: var(--space-10px);
+    margin-top: var(--space-15px);
     align-self: flex-start;
 }
 
 .nosotros__icon {
     color: var(--color-dorado);
-    font-size: 40px;
+    font-size: var(--icon-size);
     background-color: var(--color-cafe);
-    padding-block: 5px;
-    border-radius: 50%;
+    padding-block: var(--space-5px);
+    border-radius: var(--radius-circle);
 }
 
 .description__content-title {
@@ -343,15 +448,15 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    flex: 5 1 0;
-    margin: 30px 15px 30px 15px;
+    flex: var(--section-column-flex);
+    margin: var(--space-description-margin);
 }
 
 .description__img {
     border-radius: var(--radius-lg);
     object-fit: cover;
-    width: 80%;
-    height: 90%;
+    width: var(--size-description-img-width);
+    height: var(--size-description-img-height);
 }
 
 .creencias {
@@ -360,12 +465,12 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-5);
     align-content: center;
-    margin: 0px 30px 75px 30px;
+    margin: var(--space-creencias-margin);
 }
 
 .creencias__icon-container {
-    margin-right: 10px;
-    margin-top: 10px;
+    margin-right: var(--space-10px);
+    margin-top: var(--space-10px);
     align-self: flex-start;
 }
 
@@ -373,21 +478,21 @@ body {
     display: flex;
     justify-content: center;
     color: var(--color-dorado);
-    font-size: 40px;
+    font-size: var(--icon-size);
     background-color: var(--color-cafe);
-    padding-block: 5px;
-    border-radius: 50%;
+    padding-block: var(--space-5px);
+    border-radius: var(--radius-circle);
 }
 
 .title {
     color: var(--color-dorado);
-    border-bottom: 3px solid var(--color-dorado);
+    border-bottom: var(--border-title);
     align-self: flex-start;
 }
 
 .grid-item {
     display: flex;
-    line-height: 1.5;
+    line-height: var(--line-height-normal);
     background-color: var(--color-superficie-card);
     padding: var(--space-4);
     border-radius: var(--radius-md);
@@ -413,10 +518,10 @@ body {
 ================================================================ */
 
 .menu {
-    max-width: 1100px;
+    max-width: var(--container-max);
     margin: 0 auto;
-    margin-top: 50px;
-    scroll-margin-top: 95px;
+    margin-top: var(--space-50px);
+    scroll-margin-top: var(--section-scroll-margin);
     /* display: flex;
     flex-direction: column;
     align-items: center;
@@ -426,11 +531,11 @@ body {
 .menu__title {
     text-align: center;
     font-family: var(--font-display);
-    font-size: 48px;
+    font-size: var(--section-title-size);
 }
 
 .menu-category {
-    padding: 10px 100px 60px 100px;
+    padding: var(--space-menu-category-padding);
 }
 
 .menu-category__title {
@@ -448,13 +553,13 @@ body {
 .menu-category--bebidas-naturales, 
 .menu-category--refrescos {
     background-color: var(--color-cafe-section);
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border-radius: 20px;
+    margin-top: var(--space-30px);
+    margin-bottom: var(--space-30px);
+    border-radius: var(--radius-section);
 }
 
 .menu-category--refrescos {
-    margin-bottom: 75px;
+    margin-bottom: var(--space-75px);
 }
 
 
@@ -464,69 +569,69 @@ body {
 
 .menu-card {
     background-color: var(--color-superficie-card);
-    padding: 8px;
-    width: 100%;
+    padding: var(--space-8px);
+    width: var(--size-full);
     height: auto;
     box-shadow: var(--shadow-md);
-    border-radius: 15px;
+    border-radius: var(--radius-card);
 }
 
 .menu-card__info {
     margin-top: var(--space-2);
     display: flex;
-    gap: 10px;
+    gap: var(--space-10px);
 }
 
 .menu-card__title, .menu-card__separator {
-    font-family: "Quicksand", Arial, sans-serif;
-    font-weight: 700;
+    font-family: var(--font-menu-title);
+    font-weight: var(--weight-bold);
 }
 
 .menu-card__price {
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-weight: 600;
+    font-family: var(--font-menu-price);
+    font-weight: var(--weight-semibold);
 }
 
 .menu-card__photo {
     position: relative;
     overflow: hidden;
-    border-bottom: 2px solid var(--color-borde-claro);
-    border-radius: 10px 10px 0px 0px;
-    transition: transform 0.3s ease;
+    border-bottom: var(--border-photo);
+    border-radius: var(--radius-photo-top);
+    transition: transform var(--transition-hover);
 }
 
 .menu-card__photo:hover {
-    transform: scale(0.99);
+    transform: var(--hover-scale-card);
 }
 
 .menu-card__img {
-    width: 100%;
-    height: 100%;
+    width: var(--size-full);
+    height: var(--size-full);
     position: absolute;
     object-fit: cover;
     object-position: center;
 }
 
 .menu-card__overlay {
-    width: 100%;
+    width: var(--size-full);
     color: var(--color-texto-claro);
-    opacity: 0;
-    padding: 10px 20px;
+    opacity: var(--opacity-hidden);
+    padding: var(--space-button-padding);
     bottom: 0;
     position: absolute;
-    transition: background 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transition: background var(--transition-overlay), opacity var(--transition-overlay);
     background: var(--overlay-menu);
 }
 
 .menu-card__photo:hover .menu-card__overlay {
-    opacity: 1;
+    opacity: var(--opacity-visible);
 }
 
 .menu-card__ico {
     position: absolute;
-    top: 8px;
+    top: var(--icon-top);
     color: var(--color-dorado-claro);
-    font-size: 44px;
+    font-size: var(--menu-icon-size);
 }
 
 .menu-category__title {
@@ -564,13 +669,13 @@ body {
 
 .menu-card__photo--omelet {
     width: auto;
-    height: 460px;
+    height: var(--height-menu-featured);
 }
 
 .menu-card__photo--tradicional,
 .menu-card__photo--desayunoamericano {
     width: auto;
-    height: 200px;
+    height: var(--height-menu-small);
 }
 
 
@@ -602,13 +707,13 @@ body {
 
 .menu-card__photo--carne {
     width: auto;    
-    height: 460px;
+    height: var(--height-menu-featured);
 }
 
 .menu-card__photo--pasta,
 .menu-card__photo--ensalada {
     width: auto;
-    height: 200px;
+    height: var(--height-menu-small);
 }
 
 
@@ -640,13 +745,13 @@ body {
 
 .menu-card__photo--tocino {
     width: auto;
-    height: 460px;
+    height: var(--height-menu-featured);
 }
 
 .menu-card__photo--pizza,
 .menu-card__photo--jamon {
     width: auto;
-    height: 200px;
+    height: var(--height-menu-small);
 }
 
 
@@ -692,7 +797,7 @@ body {
 
 .menu-card__photo--tartaletas,
 .menu-card__photo--cheesecake {
-    height: 460px;
+    height: var(--height-menu-featured);
 }
 
 .menu-card__photo--crepas,
@@ -700,7 +805,7 @@ body {
 .menu-card__photo--tresleches,
 .menu-card__photo--pie {
     width: auto;
-    height: 200px;
+    height: var(--height-menu-small);
 }
 
 
@@ -748,8 +853,8 @@ body {
 .menu-card__photo--espresso,
 .menu-card__photo--tederosas,
 .menu-card__photo--tehierbabuena {
-    width: 100%;
-    height: 250px;
+    width: var(--size-full);
+    height: var(--height-menu-medium);
 }
 
 
@@ -787,8 +892,8 @@ body {
 .menu-card__photo--limonadahierbabuena,
 .menu-card__photo--jugopepino,
 .menu-card__photo--piñacolada {
-    width: 100%;
-    height: 400px;
+    width: var(--size-full);
+    height: var(--height-menu-natural);
 }
 
 
@@ -808,32 +913,32 @@ body {
 
 .menu-card--coca {
     grid-area: coca;
-    width: 100%;
-    min-width: 200px;
+    width: var(--size-full);
+    min-width: var(--height-menu-small);
 }
 
 .menu-card--pepsi {
     grid-area: pepsi;
-    width: 100%;
+    width: var(--size-full);
 }
 
 .menu-card--mirinda {
     grid-area: mirinda;
-    width: 100%;
+    width: var(--size-full);
 }
 
 .menu-card--cremasoda {
     grid-area: cremasoda;
-    width: 100%;
+    width: var(--size-full);
 }
 
 .menu-card--te {
     grid-area: te;
-    width: 100%;
+    width: var(--size-full);
 }
 .menu-card--horchata {
     grid-area: horchata;
-    width: 100%;
+    width: var(--size-full);
 }
 
 
@@ -845,7 +950,7 @@ body {
     max-width: var(--container-max);
     margin: 0 auto;
     padding: var(--space-20) 0;
-    scroll-margin-top: 45px;
+    scroll-margin-top: var(--contacts-scroll-margin);
 }
 
 .contacts__container {
@@ -857,7 +962,7 @@ body {
 
 .contacts__tag {
     color: var(--color-dorado);
-    font-weight: bold;
+    font-weight: var(--weight-bold);
     margin-bottom: var(--space-3);
     letter-spacing: var(--space-1);
     text-transform: uppercase;
@@ -872,7 +977,7 @@ body {
 
 .contacts__text {
     margin-bottom: var(--space-8);
-    line-height: 1.7;
+    line-height: var(--line-height-loose);
     color: var(--color-texto);
     font-family: var(--font-body);
 }
@@ -927,14 +1032,14 @@ body {
 }
 
 .contacts__label {
-    font-weight: 600;
+    font-weight: var(--weight-semibold);
     color: var(--color-cafe);
     font-size: var(--text-base);
 }
 
 .contacts__input {
     padding: var(--space-3) var(--space-4);
-    border: 1px solid var(--color-moka);
+    border: var(--border-input);
     border-radius: var(--radius-md);
     background-color: var(--color-fondo);
     font-size: var(--text-base);
@@ -950,7 +1055,7 @@ body {
 }
 
 .contacts__textarea {
-    min-height: 150px;
+    min-height: var(--height-textarea);
     resize: vertical;
 }
 
@@ -968,7 +1073,7 @@ body {
 
 .contacts__button:hover {
     background-color: var(--color-dorado);
-    transform: translateY(-2px);
+    transform: var(--hover-lift-button);
 }
 
 /* ================================================================
@@ -999,7 +1104,7 @@ body {
 }
 
 .footer__text {
-    color: rgba(255, 250, 243, 0.75);
+    color: var(--color-footer-text);
     font-size: var(--text-base);
 }
 
@@ -1012,24 +1117,24 @@ body {
     display: flex;
     justify-content: center;
     color: var(--color-texto-claro);
-    font-size: 40px;
+    font-size: var(--icon-size);
     background-color: var(--color-cafe);
-    padding-block: 5px;
-    border-radius: 50%;
+    padding-block: var(--space-5px);
+    border-radius: var(--radius-circle);
     transition: var(--transition-base);
 }
 
 .footer__social-link:hover {
     background-color: var(--color-dorado);
-    transform: translateY(-3px);
+    transform: var(--hover-lift-social);
 }
 
 .footer__bottom {
     text-align: center;
     padding: var(--space-5);
-    border-top: 1px solid rgba(255, 250, 243, 0.1);
+    border-top: var(--border-footer);
     font-size: var(--text-sm);
-    color: rgba(255, 250, 243, 0.7);
+    color: var(--color-footer-bottom);
 }
 
 /* ================================================================
@@ -1039,7 +1144,7 @@ body {
 @media (max-width: 768px) {
 
     body {
-        max-width: 768px;
+        max-width: var(--breakpoint-mobile);
     }
 
     .header {
@@ -1048,20 +1153,20 @@ body {
     }
 
     .header__nav {
-        width: 100%;
+        width: var(--size-full);
     }
 
     .nav__list {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 10px;
-        padding: 10px;
+        gap: var(--space-10px);
+        padding: var(--space-mobile-padding);
     }
 
     .nav__list-link {
-        padding: 10px 15px;
-        width: 150px;
+        padding: var(--nav-padding-mobile);
+        width: var(--nav-link-mobile-width);
         text-align: center;
     }
 
@@ -1075,7 +1180,7 @@ body {
     }
 
     .nosotros {
-    margin: 0 10px;
+    margin: 0 var(--space-10px);
     }
 
     .nosotros__description {
@@ -1106,7 +1211,7 @@ body {
     .menu-card__photo--tradicional,
     .menu-card__photo--desayunoamericano {
     width: auto;
-    height: 300px;
+    height: var(--height-menu-mobile);
 }
 
 
@@ -1121,7 +1226,7 @@ body {
     .menu-card__photo--pasta,
     .menu-card__photo--ensalada {
     width: auto;
-    height: 300px;
+    height: var(--height-menu-mobile);
     }
 
     .menu-category--paninis {
@@ -1135,7 +1240,7 @@ body {
     .menu-card__photo--pizza,
     .menu-card__photo--jamon {
     width: auto;
-    height: 300px;
+    height: var(--height-menu-mobile);
 }
 
     .menu-category--postres {
@@ -1154,7 +1259,7 @@ body {
     .menu-card__photo--tresleches,
     .menu-card__photo--pie {
     width: auto;
-    height: 300px;
+    height: var(--height-menu-mobile);
 }
 
     .menu-category--bebidas-calientes {
@@ -1175,7 +1280,7 @@ body {
     .menu-card__photo--tederosas,
     .menu-card__photo--tehierbabuena {
     width: auto;
-    height: 300px;
+    height: var(--height-menu-mobile);
 }
 
     .menu-category--bebidas-naturales {
@@ -1199,14 +1304,14 @@ body {
     .contacts__container{
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: var(--space-mobile-padding);
     }
 
     .contacts__form{
-        width: 100%;
+        width: var(--size-full);
     }
 
     .menu-card__overlay {
-        opacity: 1;
+        opacity: var(--opacity-visible);
     }
 }
