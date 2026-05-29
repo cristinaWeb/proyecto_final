@@ -168,6 +168,7 @@
     --icon-size: 40px;
     --menu-icon-size: 44px;
     --icon-top: 8px;
+    --hover-scale: scale(1.03);
     --hover-scale-card: scale(0.99);
     --hover-lift-button: translateY(-2px);
     --hover-lift-social: translateY(-3px);
@@ -355,6 +356,7 @@ body {
 
 .hero__button--info:hover {
     background-color: var(--color-moka);
+    color: var(--color-fondo);
 }
 
 .hero__image-container {
@@ -374,6 +376,11 @@ body {
     height: auto;
     border-radius: var(--radius-hero-img);
     box-shadow: var(--shadow-lg);
+    transition: transform 0.3s ease;
+}
+
+.hero__image:hover {
+    transform: var(--hover-scale);
 }
 
 
@@ -499,9 +506,12 @@ body {
     color: var(--color-cafe-oscuro);
     box-shadow: var(--shadow-md);
     align-items: start;
+    transition: var(--transition-hover);
 }
 
-
+.grid-item:hover {
+    transform: var(--hover-scale);
+}
 
 .creencias-text {
     margin-top: var(--space-3);
