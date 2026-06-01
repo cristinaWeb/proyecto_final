@@ -1152,6 +1152,23 @@ body {
    RESPONSIVE
 ================================================================ */
 
+
+@media (max-width: 860px) {
+
+    .nav__list-link{
+
+    padding:18px 25px ;
+    }
+
+
+
+}
+
+
+
+
+
+
 @media (max-width: 768px) {
 
     body {
