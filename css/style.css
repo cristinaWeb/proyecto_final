@@ -295,6 +295,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    
     height: var(--hero-height);
 }
 
@@ -309,7 +310,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: auto auto;
+    margin: auto ;
 }
 
 .hero__title {
@@ -1160,13 +1161,7 @@ body {
     padding:30px 25px ;
     }
 
-
-
 }
-
-
-
-
 
 
 @media (max-width: 768px) {
@@ -1198,13 +1193,23 @@ body {
         text-align: center;
     }
 
-    .hero__image-container,
     .hero__content {
         display: flex;
+        flex-direction: column;
+    }
+
+    .hero__text{
+        margin: var(--space-20px);
+        width: 300px;
+    }
+
+    .hero__image{
+        width: var(--size-full);
+        height: auto;
     }
 
     .hero__image-container {
-        display: flex;
+        margin: var(--space-20px);
     }
 
     .nosotros {
@@ -1226,6 +1231,16 @@ body {
 
     .creencias{
         grid-template-columns: 1fr;
+    }
+
+    .menu-category--desayunos,
+    .menu-category--almuerzos, 
+    .menu-category--paninis,
+    .menu-category--postres, 
+    .menu-category--bebidas-calientes,
+    .menu-category--bebidas-naturales, 
+    .menu-category--refrescos{
+        padding: var(--space-mobile-padding);
     }
 
     .menu-category--desayunos {
