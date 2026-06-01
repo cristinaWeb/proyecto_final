@@ -1157,8 +1157,11 @@ body {
 @media (max-width: 860px) {
 
     .nav__list-link{
-
     padding:30px 25px ;
+    }
+
+    .contacts{
+        padding: var(--space-18px);
     }
 
 }
@@ -1191,6 +1194,12 @@ body {
         padding: var(--nav-padding-mobile);
         width: var(--nav-link-mobile-width);
         text-align: center;
+    }
+
+    .hero__container {
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
     }
 
     .hero__content {
